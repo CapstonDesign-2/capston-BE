@@ -107,16 +107,19 @@ const findMostSimilarCPU = async (cpuName) => {
             .trim()
             .toLowerCase();
         
+        // 입력값을 단어로 분리
+        const inputWords = cleanedInput.split(' ');
+        
         console.log('\n=== CPU 입력 ===');
         console.log('원본 CPU 입력:', cpuName);
         console.log('정제된 CPU 입력:', cleanedInput);
+        console.log('분리된 단어:', inputWords);
         
         const allCPUs = await CPU.findAll();
         let bestMatch = null;
         let highestSimilarity = 0;
         
         for (const cpu of allCPUs) {
-            // 데이터베이스 CPU 정제 (입력값과 동일한 규칙 적용)
             const cleanedCPU = cpu.cpuName
                 .replace(/Intel.*?(?=i\d)/i, 'Intel ')
                 .replace(/[®™()@\s]/g, ' ')
@@ -125,19 +128,18 @@ const findMostSimilarCPU = async (cpuName) => {
                 .trim()
                 .toLowerCase();
             
+            // DB의 CPU 이름을 단어로 분리
+            const cpuWords = cleanedCPU.split(' ');
+            
+            // 공통 단어 수 계산
+            const commonWords = inputWords.filter(word => cpuWords.includes(word));
+            // 유사도 = 공통 단어 수 / 더 긴 배열의 길이
+            const similarity = commonWords.length / Math.max(inputWords.length, cpuWords.length);
+            
             console.log('\n비교 대상 CPU:', cpu.cpuName);
             console.log('정제된 비교 CPU:', cleanedCPU);
-            
-            let similarity = 0;
-            const minLength = Math.min(cleanedInput.length, cleanedCPU.length);
-            
-            for (let i = 0; i < minLength; i++) {
-                if (cleanedInput[i] === cleanedCPU[i]) {
-                    similarity++;
-                }
-            }
-            
-            similarity = similarity / Math.max(cleanedInput.length, cleanedCPU.length);
+            console.log('분리된 단어:', cpuWords);
+            console.log('공통 단어:', commonWords);
             console.log('유사도:', similarity);
             
             if (similarity > highestSimilarity) {
@@ -161,7 +163,7 @@ const findMostSimilarCPU = async (cpuName) => {
             };
         }
 
-        return highestSimilarity > 0.5 ? bestMatch : null;
+        return bestMatch;
     } catch (error) {
         console.error('CPU 검색 중 오류:', error);
         return null;
