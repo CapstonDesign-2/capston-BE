@@ -23,17 +23,21 @@ const GPU = require('./models/GPU');
 const RAM = require('./models/RAM');
 const baseScore = require('./models/baseScore');
 const User = require('./models/User');
+const Game = require('./models/Game');
+
 CPU.init(sequelize);
 GPU.init(sequelize);
 RAM.init(sequelize);
 baseScore.init(sequelize);
 User.init(sequelize);
+Game.init(sequelize);
 
 db.CPU = CPU;
 db.GPU = GPU;
 db.RAM = RAM;
 db.BaseScore = baseScore;
-db.User = User; 
+db.User = User;
+db.Game = Game;
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
