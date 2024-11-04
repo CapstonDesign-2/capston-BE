@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: hardwaredata
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3306:3306"  # 로컬 포트를 MariaDB에 연결
+    volumes:
+      - ./mariadb_data:/var/lib/mysql  # 로컬 볼륨을 MariaDB의 데이터 폴더에 마운트
+
+volumes:
+  mariadb_data:  # 로컬에 저장할 볼륨을 생성
