@@ -1,10 +1,9 @@
-// src/routes/gpuRoutes.js
 const express = require('express');
+const { getAllGPUs } = require('../controllers/gpuController');
 const router = express.Router();
-const gpuController = require('../controllers/gpuController');
 
 // 모든 GPU 정보를 가져오는 GET 라우트
 // /api/gpu
-router.get('/', gpuController.getAllGPUs);
+router.get('/', getAllGPUs);
 
 module.exports = router;

@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const session = require('express-session'); // 세션
 const path = require('path');
 const importData = require('./src/utils/importData');
 const bodyParser = require('body-parser');
@@ -12,6 +13,7 @@ const cpuRoutes = require('./src/routes/cpuRoutes');  // CPU
 const gpuRoutes = require('./src/routes/gpuRoutes');  // GPU
 const ramRoutes = require('./src/routes/ramRoutes');  // RAM
 const gameRoutes = require('./src/routes/gameRoutes'); // Game
+const userRoutes = require('./src/routes/userRoutes'); // user 관련
 
 // Sequelize 로깅 비활성화
 sequelize.options.logging = false;
@@ -19,8 +21,18 @@ sequelize.options.logging = false;
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true })); // 테이블 초기화
 app.use(express.json());
+
+app.use(session({
+    secret: 'your-secret-key',  // 세션 암호화 키 (하드 코딩)
+    resave: false,              // 매 요청마다 세션을 다시 저장할지 여부
+    saveUninitialized: true,    // 초기화되지 않은 세션을 저장할지 여부
+    cookie: { 
+        secure: false,          // https 환경에서만 쿠키를 전송할지 여부 (개발 중에는 false)
+        maxAge: 1000 * 60 * 60  // 세션 쿠키 유효 시간 (1시간)
+    }
+}));
 
 app.use('/', router);
 app.use('/api/score', scoreRoutes);
@@ -29,6 +41,7 @@ app.use('/api/cpu', cpuRoutes); // CPU
 app.use('/api/gpu', gpuRoutes); // GPU
 app.use('/api/ram', ramRoutes); // RAM
 app.use('/api/game', gameRoutes); // Game
+app.use('/api/user', userRoutes); // user
 
 const initializeApp = async () => {
     try {
