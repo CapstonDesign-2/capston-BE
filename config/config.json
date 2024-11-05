@@ -1,0 +1,11 @@
+{
+    "test": {
+      "username": "root",
+      "password": "1234",
+      "database": "hardwaredata",
+      "host": "127.0.0.1",
+      "dialect": "mariadb",
+      "port" : "3306"
+    }
+}
+  
