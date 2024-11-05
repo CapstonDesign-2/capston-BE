@@ -4,4 +4,4 @@ const { calculateMyScore } = require('../controllers/scoreController');
 
 router.post('/calculate', calculateMyScore);
 
-module.exports = router; 
+module.exports = router;
