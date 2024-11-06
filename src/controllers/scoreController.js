@@ -36,11 +36,11 @@ const calculateMyScore = async (req, res) => {
         // User 모델에 데이터 저장
         const user = await User.create({
             serialNum: hardwareData.deviceId,
-            cpuName: cpu.name,
+            myCPU: cpu.name,
             cpuScore: cpu.score,
-            gpuName: gpu.name,
+            myGPU: gpu.name,
             gpuScore: gpu.score,
-            ramName: ram.name,
+            myRan: ram.name,
             ramScore: ram.score,
             totalScore: hardwareData.totalScore
         });
