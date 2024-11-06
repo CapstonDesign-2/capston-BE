@@ -25,10 +25,25 @@ const calculateMyScore = async (req, res) => {
 
         // 종합 점수 계산
         const totalScore = (
-            ((cpu.cpuScore / baseScore.cpuBaseScore) * 100) * 0.3 +
-            ((gpu.gpuScore / baseScore.gpuBaseScore) * 100) * 0.5 +
-            ((ram.ramScore / baseScore.ramBaseScore) * 100) * 0.2
+            ((cpu.score / baseScore.cpuBaseScore) * 100) * 0.3 +
+            ((gpu.score / baseScore.gpuBaseScore) * 100) * 0.5 +
+            ((ram.score / baseScore.ramBaseScore) * 100) * 0.2
         );
+
+        // NaN 체크 추가
+        if (isNaN(totalScore)) {
+            console.error('점수 계산 오류:', {
+                cpu: cpu.score,
+                gpu: gpu.score,
+                ram: ram.score,
+                baseScores: {
+                    cpu: baseScore.cpuBaseScore,
+                    gpu: baseScore.gpuBaseScore,
+                    ram: baseScore.ramBaseScore
+                }
+            });
+            return res.status(500).json({ message: '점수 계산 중 오류가 발생했습니다.' });
+        }
 
         // 소수점 둘째자리까지 반올림
         const roundedScore = Math.round(totalScore * 100) / 100;
@@ -40,9 +55,9 @@ const calculateMyScore = async (req, res) => {
             cpuScore: cpu.score,
             myGPU: gpu.name,
             gpuScore: gpu.score,
-            myRan: ram.name,
+            myRAM: ram.name,
             ramScore: ram.score,
-            totalScore: hardwareData.totalScore
+            totalScore: roundedScore
         });
 
         res.status(200).json({
@@ -53,7 +68,7 @@ const calculateMyScore = async (req, res) => {
             gpuScore: gpu.score,
             ramName: ram.name,
             ramScore: ram.score,
-            totalScore: hardwareData.totalScore
+            totalScore: roundedScore
         });
 
     } catch (error) {
