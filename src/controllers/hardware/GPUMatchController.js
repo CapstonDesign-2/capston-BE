@@ -162,6 +162,68 @@ class GPUMatchController {
         const normalize = (str) => str.toLowerCase().replace(/\s+/g, ' ').trim();
         const targetNorm = normalize(targetName);
 
+        // NVIDIA GeForce 구체적인 모델 매칭
+        const geforceMatch = targetNorm.match(/(?:nvidia\s+)?(?:geforce\s+)?(rtx|gtx)\s*(\d{4})\s*(ti|super|mobile)?/i);
+        if (geforceMatch) {
+            const series = geforceMatch[1].toLowerCase();  // rtx 또는 gtx
+            const fullModel = parseInt(geforceMatch[2]);   // 2060
+            const suffix = geforceMatch[3]?.toLowerCase() || '';  // ti, super, mobile
+            const generation = Math.floor(fullModel / 1000);    // 2 (2000번대)
+            const performance = Math.floor((fullModel % 1000) / 10);  // 6 (60번대)
+
+            console.log(`Detected ${series.toUpperCase()} ${generation}000 series, performance tier ${performance}0, suffix: ${suffix}`);
+
+            // 같은 시리즈, 세대, 성능대의 GPU 찾기
+            const matchingModels = items.filter(item => {
+                const itemName = normalize(item.gpuName);
+                const itemMatch = itemName.match(/(?:nvidia\s+)?(?:geforce\s+)?(rtx|gtx)\s*(\d{4})\s*(ti|super|mobile)?/i);
+                if (!itemMatch) return false;
+                
+                const itemSeries = itemMatch[1].toLowerCase();
+                const itemFullModel = parseInt(itemMatch[2]);
+                const itemSuffix = itemMatch[3]?.toLowerCase() || '';
+                const itemGeneration = Math.floor(itemFullModel / 1000);
+                const itemPerformance = Math.floor((itemFullModel % 1000) / 10);
+                
+                return itemSeries === series && 
+                       itemGeneration === generation && 
+                       itemPerformance === performance &&
+                       suffix === itemSuffix;  // 접미사까지 정확히 일치
+            });
+
+            if (matchingModels.length > 0) {
+                console.log('Found exact matching GPU:', matchingModels[0].gpuName);
+                return {
+                    match: matchingModels[0],
+                    similarity: 1.0
+                };
+            }
+
+            // 접미사가 다르더라도 같은 시리즈, 세대, 성능대면 매칭
+            const similarModels = items.filter(item => {
+                const itemName = normalize(item.gpuName);
+                const itemMatch = itemName.match(/(?:nvidia\s+)?(?:geforce\s+)?(rtx|gtx)\s*(\d{4})\s*(ti|super|mobile)?/i);
+                if (!itemMatch) return false;
+                
+                const itemSeries = itemMatch[1].toLowerCase();
+                const itemFullModel = parseInt(itemMatch[2]);
+                const itemGeneration = Math.floor(itemFullModel / 1000);
+                const itemPerformance = Math.floor((itemFullModel % 1000) / 10);
+                
+                return itemSeries === series && 
+                       itemGeneration === generation && 
+                       itemPerformance === performance;
+            });
+
+            if (similarModels.length > 0) {
+                console.log('Found similar GPU (different suffix):', similarModels[0].gpuName);
+                return {
+                    match: similarModels[0],
+                    similarity: 0.9
+                };
+            }
+        }
+
         // AMD GPU (Radeon) 매칭
         if (targetNorm.includes('amd')) {
             // Ryzen 내장 그래픽 체크
