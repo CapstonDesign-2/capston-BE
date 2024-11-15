@@ -17,6 +17,18 @@ const calculateMyScore = async (req, res) => {
 
         const { cpu, gpu, ram } = matchResult.hardware;
 
+        // 하드웨어 매칭 결과 검증
+        if (!cpu || !gpu || !ram) {
+            return res.status(404).json({ 
+                message: '하드웨어 매칭 실패',
+                notFound: {
+                    cpu: !cpu,
+                    gpu: !gpu,
+                    ram: !ram
+                }
+            });
+        }
+
         // baseScore 가져오기
         const baseScore = await BaseScore.findOne({ where: { baseScoreId: 1 } });
         if (!baseScore) {
@@ -25,17 +37,17 @@ const calculateMyScore = async (req, res) => {
 
         // 종합 점수 계산
         const totalScore = (
-            ((cpu.score / baseScore.cpuBaseScore) * 100) * 0.3 +
-            ((gpu.score / baseScore.gpuBaseScore) * 100) * 0.5 +
-            ((ram.score / baseScore.ramBaseScore) * 100) * 0.2
+            ((cpu.cpuScore / baseScore.cpuBaseScore) * 100) * 0.3 +
+            ((gpu.gpuScore / baseScore.gpuBaseScore) * 100) * 0.5 +
+            ((ram.ramScore / baseScore.ramBaseScore) * 100) * 0.2
         );
 
         // NaN 체크 추가
         if (isNaN(totalScore)) {
             console.error('점수 계산 오류:', {
-                cpu: cpu.score,
-                gpu: gpu.score,
-                ram: ram.score,
+                cpu: cpu.cpuScore,
+                gpu: gpu.gpuScore,
+                ram: ram.ramScore,
                 baseScores: {
                     cpu: baseScore.cpuBaseScore,
                     gpu: baseScore.gpuBaseScore,
@@ -51,23 +63,23 @@ const calculateMyScore = async (req, res) => {
         // User 모델에 데이터 저장
         const user = await User.create({
             serialNum: hardwareData.deviceId,
-            myCPU: cpu.name,
-            cpuScore: cpu.score,
-            myGPU: gpu.name,
-            gpuScore: gpu.score,
-            myRAM: ram.name,
-            ramScore: ram.score,
+            myCPU: cpu.cpuName,
+            cpuScore: cpu.cpuScore,
+            myGPU: gpu.gpuName,
+            gpuScore: gpu.gpuScore,
+            myRAM: ram.ramName,
+            ramScore: ram.ramScore,
             totalScore: roundedScore
         });
 
         res.status(200).json({
             serialNum: hardwareData.deviceId,
-            cpuName: cpu.name,
-            cpuScore: cpu.score,
-            gpuName: gpu.name,
-            gpuScore: gpu.score,
-            ramName: ram.name,
-            ramScore: ram.score,
+            cpuName: cpu.cpuName,
+            cpuScore: cpu.cpuScore,
+            gpuName: gpu.gpuName,
+            gpuScore: gpu.gpuScore,
+            ramName: ram.ramName,
+            ramScore: ram.ramScore,
             totalScore: roundedScore
         });
 

@@ -1,6 +1,6 @@
-const CPUMatchController = require('../controllers/hardware/CPUMatchController');
-const GPUMatchController = require('../controllers/hardware/GPUMatchController');
-const RAMMatchController = require('../controllers/hardware/RAMMatchController');
+const CPUMatchController = require('./hardware/CPUMatchController');
+const GPUMatchController = require('./hardware/GPUMatchController');
+const RAMMatchController = require('./hardware/RAMMatchController');
 const db = require('../index');
 
 class HardwareMatcher {
@@ -40,25 +40,43 @@ class HardwareMatcher {
         };
 
         if (cpu && cpu !== 'dummy') {
+            console.log('CPU 매칭 시도:', cpu);
             const cpuMatch = await this.cpuMatcher.findBestMatch(cpu, this.hardwareCache.cpu);
             if (cpuMatch) {
                 results.hardware.cpu = cpuMatch.match;
+                console.log('CPU 매칭 성공:', cpuMatch.match.cpuName);
+            } else {
+                console.log('CPU 매칭 실패');
             }
         }
 
         if (gpu && gpu !== 'dummy') {
+            console.log('GPU 매칭 시도:', gpu);
             const gpuMatch = await this.gpuMatcher.findBestMatch(gpu, this.hardwareCache.gpu);
             if (gpuMatch) {
                 results.hardware.gpu = gpuMatch.match;
+                console.log('GPU 매칭 성공:', gpuMatch.match.gpuName);
+            } else {
+                console.log('GPU 매칭 실패');
             }
         }
 
         if (ram && ram !== 'dummy') {
+            console.log('RAM 매칭 시도:', ram);
             const ramMatch = await this.ramMatcher.findBestMatch(ram, this.hardwareCache.ram);
             if (ramMatch) {
                 results.hardware.ram = ramMatch.match;
+                console.log('RAM 매칭 성공:', ramMatch.match.ramName);
+            } else {
+                console.log('RAM 매칭 실패');
             }
         }
+
+        console.log('매칭 결과:', {
+            cpu: results.hardware.cpu ? '성공' : '실패',
+            gpu: results.hardware.gpu ? '성공' : '실패',
+            ram: results.hardware.ram ? '성공' : '실패'
+        });
 
         return results;
     }

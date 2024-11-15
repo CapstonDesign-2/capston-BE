@@ -62,6 +62,17 @@ class CPUMatchController {
             };
         }
 
+        // Intel Xeon 패턴 수정
+        const xeonMatch = name.match(/xeon\s+w(\d+)-(\d{4,5})[xX]?/i);
+        if (xeonMatch) {
+            return {
+                manufacturer: 'intel',
+                series: 'xeon',
+                generation: parseInt(xeonMatch[1]),
+                model: parseInt(xeonMatch[2])
+            };
+        }
+
         return null;
     }
 
