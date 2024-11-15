@@ -1,0 +1,138 @@
+[
+  {
+    "gameName": "발로란트",
+    "minimumCPUScore": 4114,
+    "minimumGPUScore": 387.6428571428571,
+    "minimumRAMScore": 13692.430724355858,
+    "minimumTotalScore": 4166.51,
+    "recommendedCPUScore": 4836.5,
+    "recommendedGPUScore": 940,
+    "recommendedTotalScore": 4659.44,
+    "maximumCPUScore": 11688,
+    "maximumGPUScore": 5411.5,
+    "maximumTotalScore": 8950.64,
+    "matchedHardware": {
+      "minimum": {
+        "cpus": [
+          "AMD Athlon 200GE"
+        ],
+        "gpus": [
+          "Intel HD 4000",
+          "R5 200 Series (Average)"
+        ],
+        "ram": "4GB"
+      },
+      "recommended": {
+        "cpus": [
+          "Intel Core i3-4150 @ 3.50GHz",
+          "AMD Ryzen 3 1200"
+        ],
+        "gpus": [
+          "GeForce GT 730",
+          "Radeon R7 + R7 240 Dual"
+        ],
+        "ram": "4GB"
+      },
+      "maximum": {
+        "cpus": [
+          "Intel Core i5-9400F @ 2.90GHz",
+          "AMD Ryzen 5 2600X"
+        ],
+        "gpus": [
+          "GeForce GTX 1050 Ti",
+          "Radeon R7 370"
+        ],
+        "ram": "4GB"
+      }
+    }
+  },
+  {
+    "gameName": "리그 오브 레전드",
+    "minimumCPUScore": 2191,
+    "minimumGPUScore": 552,
+    "minimumRAMScore": 13692.430724355858,
+    "minimumTotalScore": 3671.79,
+    "recommendedCPUScore": 5287,
+    "recommendedGPUScore": 1496.3333333333333,
+    "recommendedTotalScore": 5072.75,
+    "maximumCPUScore": 0,
+    "maximumGPUScore": 0,
+    "maximumTotalScore": 0,
+    "matchedHardware": {
+      "minimum": {
+        "cpus": [
+          "Intel Core i3-5020U @ 2.20GHz",
+          "AMD A6-3670 APU"
+        ],
+        "gpus": [
+          "GeForce 9600 GT",
+          "Radeon HD 6570",
+          "Intel HD 4600 manual-gen9_2015-134121"
+        ],
+        "ram": "4GB"
+      },
+      "recommended": {
+        "cpus": [
+          "Intel Core i5-3350P @ 3.10GHz",
+          "AMD Ryzen 3 1200"
+        ],
+        "gpus": [
+          "GeForce GTX 560M",
+          "Radeon HD 6950",
+          "Intel UHD 630"
+        ],
+        "ram": "4GB"
+      },
+      "maximum": {
+        "cpus": [],
+        "gpus": [],
+        "ram": "4GB"
+      }
+    }
+  },
+  {
+    "gameName": "오버워치",
+    "minimumCPUScore": 2197,
+    "minimumGPUScore": 1855.5,
+    "minimumRAMScore": 19525.26336952151,
+    "minimumTotalScore": 5491.9,
+    "recommendedCPUScore": 11407,
+    "recommendedGPUScore": 8928,
+    "recommendedTotalScore": 11791.15,
+    "maximumCPUScore": 0,
+    "maximumGPUScore": 0,
+    "maximumTotalScore": 0,
+    "matchedHardware": {
+      "minimum": {
+        "cpus": [
+          "Intel Core i3-6100E @ 2.70GHz",
+          "AMD Phenom X3 8550"
+        ],
+        "gpus": [
+          "GeForce GTX 660M",
+          "Ryzen 5 7530U with Radeon Graphics"
+        ],
+        "ram": "6GB"
+      },
+      "recommended": {
+        "cpus": [
+          "Intel Core i7-4770S @ 3.10GHz",
+          "AMD Ryzen 5 4600G"
+        ],
+        "gpus": [
+          "GeForce GTX 1060",
+          "GeForce GTX 1650",
+          "Radeon R9 380",
+          "Radeon RX 6400",
+          "Intel Arc A770"
+        ],
+        "ram": "6GB"
+      },
+      "maximum": {
+        "cpus": [],
+        "gpus": [],
+        "ram": "6GB"
+      }
+    }
+  }
+]
