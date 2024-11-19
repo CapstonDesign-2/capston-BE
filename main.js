@@ -5,6 +5,9 @@ const path = require('path');
 const importData = require('./src/utils/importData');
 const bodyParser = require('body-parser');
 const { sequelize } = require('./src/index');
+
+const cors = require('cors'); // cors 추가
+
 const { initializeGameData } = require('./src/utils/gameData');
 
 // 단일 라우터 파일 임포트
@@ -15,6 +18,12 @@ sequelize.options.logging = false;
 
 const app = express();
 const port = process.env.PORT || 4000;
+
+// CORS 미들웨어 설정
+app.use(cors({
+    // origin: true, // 로컬 테스트용
+    origin: 'https://lustrous-starburst-fc4ad8.netlify.app/', // 허용할 프론트엔드 도메인
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
