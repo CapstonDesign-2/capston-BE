@@ -12,6 +12,7 @@ const {
     getProfile,
     updateProfile
 } = require('../controllers/userController');
+const { getHardwareRanking } = require('../controllers/rankingController');
 
 router.get('/hello', (req, res) => {
     res.send('안녕하세요! 이것은 /hello 경로입니다.');
@@ -50,5 +51,8 @@ router.post('/api/user/login', loginUser);
 router.post('/api/user/logout', logoutUser);
 router.get('/api/user/profile', getProfile);
 router.put('/api/user/profile', updateProfile);
+
+// Ranking 관련 라우트
+router.get('/api/hardware/ranking', getHardwareRanking);
 
 module.exports = router;

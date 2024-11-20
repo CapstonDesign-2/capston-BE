@@ -1,7 +1,7 @@
 [
   {
     "gameName": "발로란트",
-    "gameThumbnail": "valorant.jpg",
+    "gameThumbnail": "https://cdn.gameple.co.kr/news/photo/202207/203198_206246_1218.jpg",
     "minimumCPUScore": 4114,
     "minimumGPUScore": 387.6428571428571,
     "minimumRAMScore": 13692.430724355858,
@@ -49,7 +49,7 @@
   },
   {
     "gameName": "리그 오브 레전드",
-    "gameThumbnail": "lol.jpg",
+    "gameThumbnail": "https://cdn.ggilbo.com/news/photo/202208/927547_759590_3425.png",
     "minimumCPUScore": 2191,
     "minimumGPUScore": 552,
     "minimumRAMScore": 13692.430724355858,
@@ -94,7 +94,7 @@
   },
   {
     "gameName": "오버워치",
-    "gameThumbnail": "overwatch.jpg",
+    "gameThumbnail": "https://i.namu.wiki/i/2NhbPFwj28v-TPcQp7Cgxy8wKNzT8ET6jvEhMblx5PqPe-lIE1Iu2bT0qVMhCTSoihfXdEcFpeJxsODhycMVyQ.webp",
     "minimumCPUScore": 2197,
     "minimumGPUScore": 1855.5,
     "minimumRAMScore": 19525.26336952151,
