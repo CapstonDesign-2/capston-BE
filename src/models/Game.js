@@ -12,7 +12,7 @@ module.exports = class Game extends Sequelize.Model {
                 type: DataTypes.STRING(100),
             },
             gameThumbnail: {
-                type: DataTypes.STRING(100),
+                type: DataTypes.STRING(200),
             },
             recommendedCPUScore: {
                 type: DataTypes.INTEGER,
