@@ -108,6 +108,7 @@ const createGameSpec = async (req, res) => {
         // 게임 데이터 생성 또는 업데이트
         const gameData = {
             gameName,
+            gameThumbnail: `${gameName.toLowerCase().replace(/ /g, '')}.jpg`,
             minimumCPUScore: minScores.avgCpuScore,
             minimumGPUScore: minScores.avgGpuScore,
             minimumRAMScore: avgRamScore,
@@ -131,6 +132,7 @@ const createGameSpec = async (req, res) => {
         // 게임 데이터를 JSON 파일에도 저장
         saveGameData({
             ...gameData,
+            thumbnail: gameData.gameThumbnail,
             matchedHardware: {
                 minimum: {
                     cpus: matchedHardware.minimum.cpus.map(cpu => cpu.cpuName),

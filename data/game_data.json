@@ -1,6 +1,7 @@
 [
   {
     "gameName": "발로란트",
+    "gameThumbnail": "valorant.jpg",
     "minimumCPUScore": 4114,
     "minimumGPUScore": 387.6428571428571,
     "minimumRAMScore": 13692.430724355858,
@@ -48,6 +49,7 @@
   },
   {
     "gameName": "리그 오브 레전드",
+    "gameThumbnail": "lol.jpg",
     "minimumCPUScore": 2191,
     "minimumGPUScore": 552,
     "minimumRAMScore": 13692.430724355858,
@@ -92,6 +94,7 @@
   },
   {
     "gameName": "오버워치",
+    "gameThumbnail": "overwatch.jpg",
     "minimumCPUScore": 2197,
     "minimumGPUScore": 1855.5,
     "minimumRAMScore": 19525.26336952151,

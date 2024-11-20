@@ -13,6 +13,8 @@ const { initializeGameData } = require('./src/utils/gameData');
 // 단일 라우터 파일 임포트
 const router = require('./src/routes/router');
 
+const importUserData = require('./src/utils/importUserData');  // 추가
+
 // Sequelize 로깅 비활성화
 sequelize.options.logging = false;
 
@@ -55,6 +57,9 @@ const initializeApp = async () => {
         const db = require('./src/index');
         await initializeGameData(db);
         console.log('게임 데이터가 초기화되었습니다.');
+
+        await importUserData();  // 추가: 유저 데이터 임포트
+        console.log('유저 데이터가 임포트되었습니다.');
 
         app.listen(port, () => {
             console.log(`앱이 포트 ${port}에서 실행 중입니다.`);

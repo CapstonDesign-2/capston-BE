@@ -1,0 +1,1902 @@
+[
+  {
+    "serialNum": "TEMP_USER_001",
+    "myCPU": "AMD Ryzen 5 5600X3D",
+    "cpuScore": 21953,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "A-DATA Technology AX5U6000C4016G-DCLAWH 16GB",
+    "ramScore": 6720,
+    "totalScore": 118.7
+  },
+  {
+    "serialNum": "1a8sj901929jf",
+    "myCPU": "AMD Ryzen 7 5800XT",
+    "cpuScore": 29849,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G Skill Intl F5-6000J3636F32G 32GB",
+    "ramScore": 8960,
+    "totalScore": 161.83
+  },
+  {
+    "serialNum": "2b9dk837465ht",
+    "myCPU": "AMD Ryzen 9 5900XT",
+    "cpuScore": 44421,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Corsair CMK32GX5M2B6000C36 16GB",
+    "ramScore": 6720,
+    "totalScore": 158.18
+  },
+  {
+    "serialNum": "3c7lm654123vx",
+    "myCPU": "Intel Core i7-12700K",
+    "cpuScore": 34596,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "A-DATA Technology AX5U6000C4016G-DCLAWH 16GB",
+    "ramScore": 6720,
+    "totalScore": 155.53
+  },
+  {
+    "serialNum": "4d5np098234qw",
+    "myCPU": "AMD Ryzen 5 5600X3D",
+    "cpuScore": 21953,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair CMK64GX5M2B5200C40 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.59
+  },
+  {
+    "serialNum": "5e3rs765981uy",
+    "myCPU": "Intel Core i5-12600KF",
+    "cpuScore": 27908,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Kingston 9905782-105.A00G 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.39
+  },
+  {
+    "serialNum": "6f2tm432198zx",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Crucial Technology CT32G52C42U5.C16B2 32GB",
+    "ramScore": 8960,
+    "totalScore": 141.86
+  },
+  {
+    "serialNum": "7g9wk109876bc",
+    "myCPU": "Intel Core i9-12900KS",
+    "cpuScore": 44021,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G Skill Intl F5-6000J3038F16G 16GB",
+    "ramScore": 6720,
+    "totalScore": 174.66
+  },
+  {
+    "serialNum": "8h6xm543210nv",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair CMH32GX5M2B5200Z40 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "9i4yl876543mb",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3060 12GB",
+    "gpuScore": 16998,
+    "myRAM": "A-DATA Technology AX5U5200C3816G-CLABK 16GB",
+    "ramScore": 6720,
+    "totalScore": 107.57
+  },
+  {
+    "serialNum": "0j2zp345678kl",
+    "myCPU": "AMD Ryzen 9 5950X",
+    "cpuScore": 45602,
+    "myGPU": "Radeon RX 6900 XT",
+    "gpuScore": 26791,
+    "myRAM": "Kingston 9905789-059.A00G 32GB",
+    "ramScore": 8960,
+    "totalScore": 175.52
+  },
+  {
+    "serialNum": "1k8aq912345sd",
+    "myCPU": "Intel Core i5-11600KF @ 3.90GHz",
+    "cpuScore": 19620,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Corsair CMT32GX5M2B5200Z40 16GB",
+    "ramScore": 6720,
+    "totalScore": 134.13
+  },
+  {
+    "serialNum": "2l5bw678901fg",
+    "myCPU": "AMD Ryzen 7 5800X3D",
+    "cpuScore": 28300,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G Skill Intl F5-6000J2836G16G 16GB",
+    "ramScore": 6720,
+    "totalScore": 149.42
+  },
+  {
+    "serialNum": "3m2cx234567hj",
+    "myCPU": "Intel Core i9-11900K @ 3.50GHz",
+    "cpuScore": 25230,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "Corsair CMK96GX5M2B6000Z30 48GB",
+    "ramScore": 10080,
+    "totalScore": 161.92
+  },
+  {
+    "serialNum": "4n9dy890123rt",
+    "myCPU": "AMD Ryzen 5 5600X3D",
+    "cpuScore": 21953,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "A-DATA Technology AX5U6000C3032G-DTLABRWH 32GB",
+    "ramScore": 8960,
+    "totalScore": 119.62
+  },
+  {
+    "serialNum": "5p6ez456789wu",
+    "myCPU": "Intel Core i7-12700K",
+    "cpuScore": 34596,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston 9905789-096.A00G 48GB",
+    "ramScore": 10080,
+    "totalScore": 154.13
+  },
+  {
+    "serialNum": "6q3fa012345yi",
+    "myCPU": "AMD Ryzen 7 5700G",
+    "cpuScore": 24553,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair CMH64GX5M2B6000Z30 32GB",
+    "ramScore": 8960,
+    "totalScore": 106.12
+  },
+  {
+    "serialNum": "7r8gb678901op",
+    "myCPU": "Intel Core i5-12400F",
+    "cpuScore": 19527,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "A-DATA Technology AX5U6000C3016G-B 16GB",
+    "ramScore": 6720,
+    "totalScore": 119.33
+  },
+  {
+    "serialNum": "8s5hc234567mn",
+    "myCPU": "AMD Ryzen 9 5900XT",
+    "cpuScore": 44421,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G Skill Intl F5-6000J3036G32G 32GB",
+    "ramScore": 8960,
+    "totalScore": 165.97
+  },
+  {
+    "serialNum": "9t2id890123qx",
+    "myCPU": "Intel Core i7-11700KF @ 3.60GHz",
+    "cpuScore": 23922,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair CMT64GX5M2B6000Z40 32GB",
+    "ramScore": 8960,
+    "totalScore": 124.5
+  },
+  {
+    "serialNum": "0u9je456789vz",
+    "myCPU": "AMD Ryzen 7 5800XT",
+    "cpuScore": 29849,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "A-DATA Technology AX5U6000C3032G-BLABWH 32GB",
+    "ramScore": 8960,
+    "totalScore": 131.67
+  },
+  {
+    "serialNum": "h1gh9p3rf01m",
+    "myCPU": "AMD Ryzen Threadripper PRO 7995WX",
+    "cpuScore": 153038,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "Acer BL.9BWWR.437 32GB",
+    "ramScore": 8960,
+    "totalScore": 335.94
+  },
+  {
+    "serialNum": "t0p2p3rf0rm2",
+    "myCPU": "AMD Ryzen Threadripper PRO 7985WX",
+    "cpuScore": 135433,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "Essencore Limited KD5AGU880-60A300G 16GB",
+    "ramScore": 6720,
+    "totalScore": 317.95
+  },
+  {
+    "serialNum": "h1gh3ndst4t",
+    "myCPU": "AMD Ryzen Threadripper 7980X",
+    "cpuScore": 134223,
+    "myGPU": "GeForce RTX 4080",
+    "gpuScore": 34623,
+    "myRAM": "Corsair CMK5S16G3B60E36A2 16GB",
+    "ramScore": 6720,
+    "totalScore": 297.87
+  },
+  {
+    "serialNum": "pr3m1umsp3c",
+    "myCPU": "AMD EPYC 9684X",
+    "cpuScore": 120760,
+    "myGPU": "GeForce RTX 4080",
+    "gpuScore": 34623,
+    "myRAM": "Corsair CMK96GX5M4B5600C40 24GB",
+    "ramScore": 7839.999999999999,
+    "totalScore": 285.27
+  },
+  {
+    "serialNum": "t0p5p3rf0rm",
+    "myCPU": "AMD EPYC 9654",
+    "cpuScore": 117317,
+    "myGPU": "GeForce RTX 4070 Ti",
+    "gpuScore": 31819,
+    "myRAM": "Kingston 9905782-105.A00G 32GB",
+    "ramScore": 8960,
+    "totalScore": 269.03
+  },
+  {
+    "serialNum": "b4s1csp3c01",
+    "myCPU": "Intel Celeron N5095 @ 2.00GHz",
+    "cpuScore": 4083,
+    "myGPU": "Intel 82852/82855 GM/GME Controller",
+    "gpuScore": 1,
+    "myRAM": "Lanson Memory Co Ltd  4GB",
+    "ramScore": 2240,
+    "totalScore": 2.9
+  },
+  {
+    "serialNum": "l0w3ndsp3c2",
+    "myCPU": "AMD Athlon 200GE",
+    "cpuScore": 4114,
+    "myGPU": "VIA Chrome9 HC3 IGP",
+    "gpuScore": 2,
+    "myRAM": "ASint Technology SSZ302G08-GGNHC 2GB",
+    "ramScore": 1120,
+    "totalScore": 2.46
+  },
+  {
+    "serialNum": "m1n1m4lsp3c",
+    "myCPU": "Intel Pentium Gold G6400 @ 4.00GHz",
+    "cpuScore": 4123,
+    "myGPU": "Mobile Intel 945 Express",
+    "gpuScore": 1,
+    "myRAM": "Positivo Informatica Ltd AD63I1B0823EV 2GB",
+    "ramScore": 1120,
+    "totalScore": 2.46
+  },
+  {
+    "serialNum": "b4s1cst4t1n",
+    "myCPU": "AMD FX-6300 Six-Core",
+    "cpuScore": 4212,
+    "myGPU": "S3 ProSavageDDR",
+    "gpuScore": 1,
+    "myRAM": "V-Color Technology Inc. TD4G08C11-H11 4GB",
+    "ramScore": 2240,
+    "totalScore": 2.96
+  },
+  {
+    "serialNum": "l0w3stp3rf0",
+    "myCPU": "Intel Core i3-6100 @ 3.70GHz",
+    "cpuScore": 4140,
+    "myGPU": "RADEON IGP 34xM",
+    "gpuScore": 1,
+    "myRAM": "Avant Technology H6451U64F9333G 4GB",
+    "ramScore": 2240,
+    "totalScore": 2.92
+  },
+  {
+    "serialNum": "1a2b3c4d5e6f",
+    "myCPU": "Intel Core i3-10100F @ 3.60GHz",
+    "cpuScore": 8759,
+    "myGPU": "GeForce GTX 1650 SUPER",
+    "gpuScore": 10161,
+    "myRAM": "Kingston Value RAM 8GB",
+    "ramScore": 4480,
+    "totalScore": 54.48
+  },
+  {
+    "serialNum": "2b3c4d5e6f7g",
+    "myCPU": "AMD Ryzen 3 3200GE",
+    "cpuScore": 7309,
+    "myGPU": "Radeon Vega 8 Ryzen 3 3200G",
+    "gpuScore": 1925,
+    "myRAM": "Crucial 8GB DDR4-2666",
+    "ramScore": 4480,
+    "totalScore": 9.96
+  },
+  {
+    "serialNum": "3c4d5e6f7g8h",
+    "myCPU": "Intel Pentium Gold G6400 @ 4.00GHz",
+    "cpuScore": 4123,
+    "myGPU": "GeForce GTX 1050 Ti",
+    "gpuScore": 6314,
+    "myRAM": "Patriot Signature 8GB",
+    "ramScore": 4480,
+    "totalScore": 33.91
+  },
+  {
+    "serialNum": "4d5e6f7g8h9i",
+    "myCPU": "AMD Athlon 3000G",
+    "cpuScore": 4482,
+    "myGPU": "Radeon RX 5500 XT",
+    "gpuScore": 9137,
+    "myRAM": "Team Group Inc. Team-Elite-1600 8GB",
+    "ramScore": 4480,
+    "totalScore": 47.53
+  },
+  {
+    "serialNum": "5e6f7g8h9i0j",
+    "myCPU": "Intel Core i3-9100F @ 3.60GHz",
+    "cpuScore": 6736,
+    "myGPU": "GeForce GT 1030",
+    "gpuScore": 2458,
+    "myRAM": "Crucial 8GB DDR4-2400",
+    "ramScore": 4480,
+    "totalScore": 10.95
+  },
+  {
+    "serialNum": "6f7g8h9i0j1k",
+    "myCPU": "Intel Core i5-10400F @ 2.90GHz",
+    "cpuScore": 12198,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 69.41
+  },
+  {
+    "serialNum": "7g8h9i0j1k2l",
+    "myCPU": "AMD Ryzen 5 3600XT",
+    "cpuScore": 18641,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 99.47
+  },
+  {
+    "serialNum": "8h9i0j1k2l3m",
+    "myCPU": "Intel Core i5-11400F @ 2.60GHz",
+    "cpuScore": 17029,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "Crucial Ballistix 16GB",
+    "ramScore": 6720,
+    "totalScore": 80.79
+  },
+  {
+    "serialNum": "9i0j1k2l3m4n",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6500 XT",
+    "gpuScore": 9567,
+    "myRAM": "Kingston FURY Beast 16GB",
+    "ramScore": 6720,
+    "totalScore": 69.24
+  },
+  {
+    "serialNum": "0j1k2l3m4n5o",
+    "myCPU": "Intel Core i3-12100F",
+    "cpuScore": 14108,
+    "myGPU": "GeForce RTX 3050 8GB",
+    "gpuScore": 12812,
+    "myRAM": "Team Group Inc.  16GB",
+    "ramScore": 6720,
+    "totalScore": 77.46
+  },
+  {
+    "serialNum": "aa1bb2cc3dd4",
+    "myCPU": "AMD Ryzen 5 4600G",
+    "cpuScore": 16065,
+    "myGPU": "Radeon RX 5500 XT",
+    "gpuScore": 9137,
+    "myRAM": "Patriot Viper Steel 16GB",
+    "ramScore": 6720,
+    "totalScore": 61.85
+  },
+  {
+    "serialNum": "bb2cc3dd4ee5",
+    "myCPU": "Intel Core i5-10600KF @ 4.10GHz",
+    "cpuScore": 14228,
+    "myGPU": "GeForce GTX 1070 Ti",
+    "gpuScore": 14695,
+    "myRAM": "Corsair Vengeance RGB 16GB",
+    "ramScore": 6720,
+    "totalScore": 86.55
+  },
+  {
+    "serialNum": "cc3dd4ee5ff6",
+    "myCPU": "AMD Ryzen 5 5500GT",
+    "cpuScore": 20241,
+    "myGPU": "Radeon RX 5600 XT",
+    "gpuScore": 13633,
+    "myRAM": "G.Skill Trident Z 16GB",
+    "ramScore": 6720,
+    "totalScore": 87.32
+  },
+  {
+    "serialNum": "dd4ee5ff6gg7",
+    "myCPU": "Intel Core i5-11500B @ 3.30GHz",
+    "cpuScore": 17437,
+    "myGPU": "GeForce RTX 2060 SUPER",
+    "gpuScore": 16532,
+    "myRAM": "Crucial Ballistix MAX 16GB",
+    "ramScore": 6720,
+    "totalScore": 98.42
+  },
+  {
+    "serialNum": "ee5ff6gg7hh8",
+    "myCPU": "AMD Ryzen 5 3600XT",
+    "cpuScore": 18641,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Kingston FURY Renegade 16GB",
+    "ramScore": 6720,
+    "totalScore": 99.47
+  },
+  {
+    "serialNum": "ff6gg7hh8ii9",
+    "myCPU": "Intel Core i5-12400F",
+    "cpuScore": 19527,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair CMP64GX5M2X6000Z30 32GB",
+    "ramScore": 8960,
+    "totalScore": 120.24
+  },
+  {
+    "serialNum": "gg7hh8ii9jj0",
+    "myCPU": "AMD Ryzen 7 5800XT",
+    "cpuScore": 29849,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "G.Skill Trident Z Neo 32GB",
+    "ramScore": 8960,
+    "totalScore": 127.27
+  },
+  {
+    "serialNum": "hh8ii9jj0kk1",
+    "myCPU": "Intel Core i7-12700K",
+    "cpuScore": 34596,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 171.91
+  },
+  {
+    "serialNum": "ii9jj0kk1ll2",
+    "myCPU": "AMD Ryzen 9 5900XT",
+    "cpuScore": 44421,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G.Skill Trident Z Royal 64GB",
+    "ramScore": 11200,
+    "totalScore": 171.45
+  },
+  {
+    "serialNum": "jj0kk1ll2mm3",
+    "myCPU": "Intel Core i9-13900KS",
+    "cpuScore": 61588,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "G.Skill Trident Z5 RGB 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 256.38
+  },
+  {
+    "serialNum": "kk1ll2mm3nn4",
+    "myCPU": "AMD Ryzen 9 7950X",
+    "cpuScore": 62714,
+    "myGPU": "Radeon RX 7900 XTX",
+    "gpuScore": 31030,
+    "myRAM": "Corsair Dominator Platinum RGB 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 221.44
+  },
+  {
+    "serialNum": "mm5nn6oo7pp8",
+    "myCPU": "Intel Core i5-12600KF",
+    "cpuScore": 27908,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Corsair Vengeance RGB PRO 32GB",
+    "ramScore": 8960,
+    "totalScore": 143.08
+  },
+  {
+    "serialNum": "nn6oo7pp8qq9",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "oo7pp8qq9rr0",
+    "myCPU": "Intel Core i7-12700",
+    "cpuScore": 30769,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Crucial Ballistix RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 145.85
+  },
+  {
+    "serialNum": "pp8qq9rr0ss1",
+    "myCPU": "AMD Ryzen 7 7700X",
+    "cpuScore": 36007,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Kingston FURY Beast RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 157.81
+  },
+  {
+    "serialNum": "qq9rr0ss1tt2",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Team Group Inc. SD5-5200 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.15
+  },
+  {
+    "serialNum": "rr0ss1tt2uu3",
+    "myCPU": "AMD Ryzen 7 5800X3D",
+    "cpuScore": 28300,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.77
+  },
+  {
+    "serialNum": "ss1tt2uu3vv4",
+    "myCPU": "Intel Core i5-13600K",
+    "cpuScore": 37944,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "G.Skill Trident Z5 32GB",
+    "ramScore": 8960,
+    "totalScore": 152.81
+  },
+  {
+    "serialNum": "tt2uu3vv4ww5",
+    "myCPU": "AMD Ryzen 5 7600X",
+    "cpuScore": 28470,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Crucial DDR5 32GB",
+    "ramScore": 8960,
+    "totalScore": 130.33
+  },
+  {
+    "serialNum": "uu3vv4ww5xx6",
+    "myCPU": "Intel Core i7-12700K",
+    "cpuScore": 34596,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Renegade 32GB",
+    "ramScore": 8960,
+    "totalScore": 149.56
+  },
+  {
+    "serialNum": "vv4ww5xx6yy7",
+    "myCPU": "AMD Ryzen 7 5800XT",
+    "cpuScore": 29849,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Patriot Viper RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 151.84
+  },
+  {
+    "serialNum": "ww5xx6yy7zz8",
+    "myCPU": "Intel Core i7-13700KF",
+    "cpuScore": 46578,
+    "myGPU": "GeForce RTX 4070 Ti",
+    "gpuScore": 31819,
+    "myRAM": "G.Skill Trident Z Royal 64GB",
+    "ramScore": 11200,
+    "totalScore": 205.9
+  },
+  {
+    "serialNum": "xx6yy7zz8aa9",
+    "myCPU": "AMD Ryzen 9 7900X",
+    "cpuScore": 51723,
+    "myGPU": "Radeon RX 7900 XTX",
+    "gpuScore": 31030,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 207.13
+  },
+  {
+    "serialNum": "yy7zz8aa9bb0",
+    "myCPU": "Intel Core i9-12900KS",
+    "cpuScore": 44021,
+    "myGPU": "GeForce RTX 4080",
+    "gpuScore": 34623,
+    "myRAM": "Crucial DDR5 64GB",
+    "ramScore": 11200,
+    "totalScore": 216.78
+  },
+  {
+    "serialNum": "zz8aa9bb0cc1",
+    "myCPU": "AMD Ryzen 9 5950X",
+    "cpuScore": 45602,
+    "myGPU": "Radeon RX 6950 XT",
+    "gpuScore": 28158,
+    "myRAM": "G.Skill Trident Z5 RGB 64GB",
+    "ramScore": 11200,
+    "totalScore": 187.51
+  },
+  {
+    "serialNum": "aa9bb0cc1dd2",
+    "myCPU": "Intel Core i7-13700KF",
+    "cpuScore": 46578,
+    "myGPU": "GeForce RTX 4070 Ti",
+    "gpuScore": 31819,
+    "myRAM": "Kingston FURY Beast RGB 64GB",
+    "ramScore": 11200,
+    "totalScore": 205.9
+  },
+  {
+    "serialNum": "bb0cc1dd2ee3",
+    "myCPU": "AMD Ryzen 9 7900X",
+    "cpuScore": 51723,
+    "myGPU": "Radeon RX 7900 XTX",
+    "gpuScore": 31030,
+    "myRAM": "Corsair Vengeance RGB DDR5 64GB",
+    "ramScore": 11200,
+    "totalScore": 207.13
+  },
+  {
+    "serialNum": "cc1dd2ee3ff4",
+    "myCPU": "Intel Core i9-13900K",
+    "cpuScore": 59050,
+    "myGPU": "GeForce RTX 4080",
+    "gpuScore": 34623,
+    "myRAM": "G.Skill Trident Z5 RGB 64GB",
+    "ramScore": 11200,
+    "totalScore": 231.36
+  },
+  {
+    "serialNum": "dd2ee3ff4gg5",
+    "myCPU": "AMD Ryzen 9 7950X",
+    "cpuScore": 62714,
+    "myGPU": "Radeon RX 7900 XTX",
+    "gpuScore": 31030,
+    "myRAM": "Crucial DDR5 64GB",
+    "ramScore": 11200,
+    "totalScore": 217.79
+  },
+  {
+    "serialNum": "ee3ff4gg5hh6",
+    "myCPU": "Intel Core i9-13900KS",
+    "cpuScore": 61588,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "G.Skill Trident Z5 RGB 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 256.38
+  },
+  {
+    "serialNum": "ff4gg5hh6ii7",
+    "myCPU": "AMD Ryzen Threadripper 7970X",
+    "cpuScore": 98111,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "Corsair Dominator Platinum RGB 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 291.8
+  },
+  {
+    "serialNum": "gg5hh6ii7jj8",
+    "myCPU": "AMD Ryzen Threadripper PRO 7975WX",
+    "cpuScore": 95664,
+    "myGPU": "Radeon RX 7900 XTX",
+    "gpuScore": 31030,
+    "myRAM": "Kingston FURY Beast RGB 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 253.4
+  },
+  {
+    "serialNum": "hh6ii7jj8kk9",
+    "myCPU": "Intel Xeon w9-3495X",
+    "cpuScore": 92595,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "Crucial DDR5 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 286.45
+  },
+  {
+    "serialNum": "ii7jj8kk9ll0",
+    "myCPU": "AMD Ryzen Threadripper PRO 7995WX",
+    "cpuScore": 153038,
+    "myGPU": "GeForce RTX 4090",
+    "gpuScore": 38591,
+    "myRAM": "G.Skill Trident Z5 RGB 256GB",
+    "ramScore": 24640,
+    "totalScore": 352.37
+  },
+  {
+    "serialNum": "f7a2b1c3-d4e5-4f6g-8h9i-j0k1l2m3n4o5",
+    "myCPU": "Intel Core i3-6300 @ 3.80GHz",
+    "cpuScore": 4345,
+    "myGPU": "GeForce GTX 1650 SUPER",
+    "gpuScore": 10161,
+    "myRAM": "Crucial Technology CT8G52C42U5.M4GB 8GB",
+    "ramScore": 5600,
+    "totalScore": 52.8
+  },
+  {
+    "serialNum": "a1b2c3d4-e5f6-4g7h-8i9j-k0l1m2n3o4p5",
+    "myCPU": "Intel Core i3-7100 @ 3.90GHz",
+    "cpuScore": 4324,
+    "myGPU": "GeForce GT 1030",
+    "gpuScore": 2458,
+    "myRAM": "Kingston 9965413-028.A01LF 4GB",
+    "ramScore": 2240,
+    "totalScore": 8.87
+  },
+  {
+    "serialNum": "b2c3d4e5-f6g7-4h8i-9j0k-l1m2n3o4p5q6",
+    "myCPU": "Intel Core i3-8100H @ 3.00GHz",
+    "cpuScore": 4310,
+    "myGPU": "GeForce GTX 1050 Ti",
+    "gpuScore": 6314,
+    "myRAM": "Corsair CMK16GX4M2B3000C15 8GB",
+    "ramScore": 4480,
+    "totalScore": 34
+  },
+  {
+    "serialNum": "c3d4e5f6-g7h8-4i9j-0k1l-m2n3o4p5q6r7",
+    "myCPU": "Intel Core i5-3350P @ 3.10GHz",
+    "cpuScore": 4295,
+    "myGPU": "GeForce GTX 1050 Ti",
+    "gpuScore": 6314,
+    "myRAM": "G Skill Intl F4-3200C16-8GIS 8GB",
+    "ramScore": 4480,
+    "totalScore": 33.99
+  },
+  {
+    "serialNum": "d4e5f6g7-h8i9-4j0k-1l2m-n3o4p5q6r7s8",
+    "myCPU": "Intel Core i5-3475S @ 2.90GHz",
+    "cpuScore": 4277,
+    "myGPU": "GeForce GTX 1630",
+    "gpuScore": 4982,
+    "myRAM": "Crucial Technology CT8G4DFS8266.M8FE 8GB",
+    "ramScore": 4480,
+    "totalScore": 27.64
+  },
+  {
+    "serialNum": "e5f6g7h8-i9j0-4k1l-2m3n-o4p5q6r7s8t9",
+    "myCPU": "Intel Core i5-6400T @ 2.20GHz",
+    "cpuScore": 4279,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "Corsair CMK16GX4M1E3200C16 16GB",
+    "ramScore": 6720,
+    "totalScore": 66.35
+  },
+  {
+    "serialNum": "f6g7h8i9-j0k1-4l2m-3n4o-p5q6r7s8t9u0",
+    "myCPU": "Intel Core i5-6350HQ @ 2.30GHz",
+    "cpuScore": 4255,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G Skill Intl F4-3600C16-16GTZNC 16GB",
+    "ramScore": 6720,
+    "totalScore": 65.56
+  },
+  {
+    "serialNum": "g7h8i9j0-k1l2-4m3n-4o5p-q6r7s8t9u0v1",
+    "myCPU": "Intel Core i3-8109U @ 3.00GHz",
+    "cpuScore": 4263,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "Kingston KHX3200C16D4/16GX 16GB",
+    "ramScore": 6720,
+    "totalScore": 66.34
+  },
+  {
+    "serialNum": "h8i9j0k1-l2m3-4n4o-5p6q-r7s8t9u0v1w2",
+    "myCPU": "Intel Core i3-1110G4 @ 1.80GHz",
+    "cpuScore": 4236,
+    "myGPU": "GeForce RTX 2060 SUPER",
+    "gpuScore": 16532,
+    "myRAM": "Crucial Technology BL16G32C16U4B.M16FE 16GB",
+    "ramScore": 6720,
+    "totalScore": 83.56
+  },
+  {
+    "serialNum": "i9j0k1l2-m3n4-4o5p-6q7r-s8t9u0v1w2x3",
+    "myCPU": "Intel Core i5-3340 @ 3.10GHz",
+    "cpuScore": 4227,
+    "myGPU": "GeForce RTX 2060 SUPER",
+    "gpuScore": 16532,
+    "myRAM": "Corsair CMW16GX4M1Z3200C16 16GB",
+    "ramScore": 6720,
+    "totalScore": 83.55
+  },
+  {
+    "serialNum": "j0k1l2m3-n4o5-4p6q-7r8s-t9u0v1w2x3y4",
+    "myCPU": "AMD FX-6300 Six-Core",
+    "cpuScore": 4212,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G Skill Intl F4-3600C16-16GTZN 16GB",
+    "ramScore": 6720,
+    "totalScore": 83.44
+  },
+  {
+    "serialNum": "k1l2m3n4-o5p6-4q7r-8s9t-u0v1w2x3y4z5",
+    "myCPU": "Intel Core i3-7300T @ 3.50GHz",
+    "cpuScore": 4211,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Crucial Technology BL32G32C16U4B.M16FB1 32GB",
+    "ramScore": 8960,
+    "totalScore": 84.35
+  },
+  {
+    "serialNum": "l2m3n4o5-p6q7-4r8s-9t0u-v1w2x3y4z5a6",
+    "myCPU": "Intel Core i5-2450P @ 3.20GHz",
+    "cpuScore": 4203,
+    "myGPU": "GeForce RTX 3050 8GB",
+    "gpuScore": 12812,
+    "myRAM": "Kingston KF432C16BB1/16 16GB",
+    "ramScore": 6720,
+    "totalScore": 65.82
+  },
+  {
+    "serialNum": "m3n4o5p6-q7r8-4s9t-0u1v-w2x3y4z5a6b7",
+    "myCPU": "Intel Core i3-6100 @ 3.70GHz",
+    "cpuScore": 4140,
+    "myGPU": "GeForce RTX 3050 Ti Laptop GPU",
+    "gpuScore": 10141,
+    "myRAM": "Corsair CMK64GX4M2E3200C16 32GB",
+    "ramScore": 8960,
+    "totalScore": 53.98
+  },
+  {
+    "serialNum": "n4o5p6q7-r8s9-4t0u-1v2w-x3y4z5a6b7c8",
+    "myCPU": "Intel Pentium Gold G6500 @ 4.10GHz",
+    "cpuScore": 4140,
+    "myGPU": "Radeon RX 6650 XT",
+    "gpuScore": 17222,
+    "myRAM": "G Skill Intl F4-3200C16-16GVK 16GB",
+    "ramScore": 6720,
+    "totalScore": 86.8
+  },
+  {
+    "serialNum": "o5p6q7r8-s9t0-4u1v-2w3x-y4z5a6b7c8d9",
+    "myCPU": "Intel Core i5-2550K @ 3.40GHz",
+    "cpuScore": 4134,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair CMK64GX4M2D3600C18 32GB",
+    "ramScore": 8960,
+    "totalScore": 103.31
+  },
+  {
+    "serialNum": "p6q7r8s9-t0u1-4v2w-3x4y-z5a6b7c8d9e0",
+    "myCPU": "Intel Core i5-2500K @ 3.30GHz",
+    "cpuScore": 4120,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G Skill Intl F4-3600C16-32GTZN 32GB",
+    "ramScore": 8960,
+    "totalScore": 103.3
+  },
+  {
+    "serialNum": "q7r8s9t0-u1v2-4w3x-4y5z-a6b7c8d9e0f1",
+    "myCPU": "Intel Core i5-2500 @ 3.30GHz",
+    "cpuScore": 4115,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Crucial Technology BL32G32C16U4BL.M16FB 32GB",
+    "ramScore": 8960,
+    "totalScore": 100.32
+  },
+  {
+    "serialNum": "r8s9t0u1-v2w3-4x4y-5z6a-b7c8d9e0f1g2",
+    "myCPU": "Intel Core i5-3330 @ 3.00GHz",
+    "cpuScore": 4098,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Kingston KF556C36-32 32GB",
+    "ramScore": 8960,
+    "totalScore": 100.31
+  },
+  {
+    "serialNum": "s9t0u1v2-w3x4-4y5z-6a7b-c8d9e0f1g2h3",
+    "myCPU": "AMD FX-6200 Six-Core",
+    "cpuScore": 4085,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Corsair CMK64GX4M2D3600C18 32GB",
+    "ramScore": 11200,
+    "totalScore": 123.47
+  },
+  {
+    "serialNum": "t0u1v2w3-x4y5-4z6a-7b8c-d9e0f1g2h3i4",
+    "myCPU": "Intel Core i7-7660U @ 2.50GHz",
+    "cpuScore": 4074,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "G Skill Intl F4-3600C16-32GTZN 32GB",
+    "ramScore": 8960,
+    "totalScore": 117.99
+  },
+  {
+    "serialNum": "u1v2w3x4-y5z6-4a7b-8c9d-e0f1g2h3i4j5",
+    "myCPU": "Intel Core i5-4590T @ 2.00GHz",
+    "cpuScore": 4070,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Crucial BL2K32G32C16U4B 64GB",
+    "ramScore": 11200,
+    "totalScore": 110.17
+  },
+  {
+    "serialNum": "v2w3x4y5-z6a7-4b8c-9d0e-f1g2h3i4j5k6",
+    "myCPU": "Intel Xeon E3-1260L @ 2.40GHz",
+    "cpuScore": 4063,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "Kingston KF432C16BBK2/32 16GB",
+    "ramScore": 8960,
+    "totalScore": 134.85
+  },
+  {
+    "serialNum": "w3x4y5z6-a7b8-4c9d-0e1f-g2h3i4j5k6l7",
+    "myCPU": "Intel Core i7-7567U @ 3.50GHz",
+    "cpuScore": 4057,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "Corsair CMK64GX4M2E3200C16 32GB",
+    "ramScore": 11200,
+    "totalScore": 140.33
+  },
+  {
+    "serialNum": "x4y5z6a7-b8c9-4d0e-1f2g-h3i4j5k6l7m8",
+    "myCPU": "Intel Core i7-2720QM @ 2.20GHz",
+    "cpuScore": 4003,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G Skill Intl F4-4000C18-32GVK 32GB",
+    "ramScore": 8960,
+    "totalScore": 124.83
+  },
+  {
+    "serialNum": "y5z6a7b8-c9d0-4e1f-2g3h-i4j5k6l7m8n9",
+    "myCPU": "Intel Core i3-6300T @ 3.30GHz",
+    "cpuScore": 4002,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Crucial BL2K32G36C16U4B 64GB",
+    "ramScore": 11200,
+    "totalScore": 130.31
+  },
+  {
+    "serialNum": "z6a7b8c9-d0e1-4f2g-3h4i-j5k6l7m8n9o0",
+    "myCPU": "Intel Core i5-7260U @ 2.20GHz",
+    "cpuScore": 3989,
+    "myGPU": "GeForce RTX 3090 Ti",
+    "gpuScore": 29692,
+    "myRAM": "Kingston KF436C17BB/8 8GB",
+    "ramScore": 8960,
+    "totalScore": 147.05
+  },
+  {
+    "serialNum": "a7b8c9d0-e1f2-4g3h-4i5j-k6l7m8n9o0p1",
+    "myCPU": "Intel Core i7-2710QE @ 2.10GHz",
+    "cpuScore": 4044,
+    "myGPU": "GeForce RTX 3090 Ti",
+    "gpuScore": 29692,
+    "myRAM": "Corsair CMK128GX4M8E3200C16 16GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 156.21
+  },
+  {
+    "serialNum": "b8c9d0e1-f2g3-4h4i-5j6k-l7m8n9o0p1q2",
+    "myCPU": "AMD FX-8100 Eight-Core",
+    "cpuScore": 4046,
+    "myGPU": "Radeon RX 6900 XT",
+    "gpuScore": 26791,
+    "myRAM": "G Skill Intl F4-3600C16-8GTZNC 8GB",
+    "ramScore": 11200,
+    "totalScore": 138.74
+  },
+  {
+    "serialNum": "c9d0e1f2-g3h4-4i5j-6k7l-m8n9o0p1q2r3",
+    "myCPU": "Intel Core i3-6098P @ 3.60GHz",
+    "cpuScore": 4017,
+    "myGPU": "GeForce RTX 4060 Ti",
+    "gpuScore": 22899,
+    "myRAM": "Crucial BL2K64G36C16U4B 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 123.83
+  },
+  {
+    "serialNum": "d0e1f2g3-h4i5-4j6k-7l8m-n9o0p1q2r3s4",
+    "myCPU": "AMD Opteron 6212",
+    "cpuScore": 4007,
+    "myGPU": "GeForce RTX 4060 Ti",
+    "gpuScore": 22899,
+    "myRAM": "Kingston KF548C38-32 32GB",
+    "ramScore": 8960,
+    "totalScore": 114.7
+  },
+  {
+    "serialNum": "e1f2g3h4-i5j6-4k7l-8m9n-o0p1q2r3s4t5",
+    "myCPU": "Intel Core i5-10400F @ 2.90GHz",
+    "cpuScore": 12198,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 70.19
+  },
+  {
+    "serialNum": "f2g3h4i5-j6k7-4l8m-9n0o-p1q2r3s4t5u6",
+    "myCPU": "AMD Ryzen 5 3600",
+    "cpuScore": 17748,
+    "myGPU": "Radeon RX 5600 XT",
+    "gpuScore": 13633,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 84.9
+  },
+  {
+    "serialNum": "g3h4i5j6-k7l8-4m9n-0o1p-q2r3s4t5u6v7",
+    "myCPU": "Intel Core i7-10700K @ 3.80GHz",
+    "cpuScore": 18779,
+    "myGPU": "GeForce RTX 2070 SUPER",
+    "gpuScore": 18228,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 108.71
+  },
+  {
+    "serialNum": "h4i5j6k7-l8m9-4n0o-1p2q-r3s4t5u6v7w8",
+    "myCPU": "AMD Ryzen 7 3700X",
+    "cpuScore": 22543,
+    "myGPU": "Radeon RX 5700 XT",
+    "gpuScore": 16573,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 104.48
+  },
+  {
+    "serialNum": "i5j6k7l8-m9n0-4o1p-2q3r-s4t5u6v7w8x9",
+    "myCPU": "Intel Core i9-9900K @ 3.60GHz",
+    "cpuScore": 18263,
+    "myGPU": "GeForce RTX 2080 Ti",
+    "gpuScore": 21744,
+    "myRAM": "Corsair Dominator Platinum 32GB",
+    "ramScore": 8960,
+    "totalScore": 124.96
+  },
+  {
+    "serialNum": "j6k7l8m9-n0o1-4p2q-3r4s-t5u6v7w8x9y0",
+    "myCPU": "AMD Ryzen 9 3900X",
+    "cpuScore": 32621,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G.Skill Ripjaws V 64GB",
+    "ramScore": 11200,
+    "totalScore": 160.01
+  },
+  {
+    "serialNum": "k7l8m9n0-o1p2-4q3r-5s6t-u7v8w9x0y1z2",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "Corsair Vengeance LPX 64GB",
+    "ramScore": 11200,
+    "totalScore": 162.2
+  },
+  {
+    "serialNum": "l8m9n0o1-p2q3-4r5s-6t7u-v8w9x0y1z2a3",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "G.Skill Trident Z Neo 64GB",
+    "ramScore": 11200,
+    "totalScore": 155.38
+  },
+  {
+    "serialNum": "m9n0o1p2-q3r4-5s6t-7u8v-w9x0y1z2a3b4",
+    "myCPU": "Intel Core i9-11900K @ 3.50GHz",
+    "cpuScore": 25230,
+    "myGPU": "GeForce RTX 3090 Ti",
+    "gpuScore": 29692,
+    "myRAM": "Corsair Dominator Platinum RGB 64GB",
+    "ramScore": 11200,
+    "totalScore": 175.06
+  },
+  {
+    "serialNum": "n0o1p2q3-r4s5-6t7u-8v9w-x0y1z2a3b4c5",
+    "myCPU": "AMD Ryzen 9 5950X",
+    "cpuScore": 45602,
+    "myGPU": "Radeon RX 6900 XT",
+    "gpuScore": 26791,
+    "myRAM": "G.Skill Ripjaws V 128GB",
+    "ramScore": 15679.999999999998,
+    "totalScore": 184.65
+  },
+  {
+    "serialNum": "p2q3r4s5-t6u7-4v8w-9x0y-z1a2b3c4d5e6",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 121.62
+  },
+  {
+    "serialNum": "q3r4s5t6-u7v8-4w9x-0y1z-a2b3c4d5e6f7",
+    "myCPU": "Intel Core i5-11600K @ 3.90GHz",
+    "cpuScore": 19589,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 117.32
+  },
+  {
+    "serialNum": "r4s5t6u7-v8w9-4x0y-1z2a-b3c4d5e6f7g8",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Crucial Ballistix 32GB",
+    "ramScore": 8960,
+    "totalScore": 143.02
+  },
+  {
+    "serialNum": "s5t6u7v8-w9x0-4y1z-2a3b-c4d5e6f7g8h9",
+    "myCPU": "Intel Core i7-12700K",
+    "cpuScore": 34596,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 149.56
+  },
+  {
+    "serialNum": "t6u7v8w9-x0y1-4z2a-3b4c-d5e6f7g8h9i0",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "u7v8w9x0-y1z2-4a3b-4c5d-e6f7g8h9i0j1",
+    "myCPU": "Intel Core i5-12600K",
+    "cpuScore": 27698,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair Vengeance RGB Pro 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.17
+  },
+  {
+    "serialNum": "v8w9x0y1-z2a3-4b4c-5d6e-f7g8h9i0j1k2",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6650 XT",
+    "gpuScore": 17222,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 105.72
+  },
+  {
+    "serialNum": "w9x0y1z2-a3b4-4c5d-6e7f-g8h9i0j1k2l3",
+    "myCPU": "Intel Core i7-11700F @ 2.50GHz",
+    "cpuScore": 20996,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Crucial Ballistix 16GB",
+    "ramScore": 6720,
+    "totalScore": 120.75
+  },
+  {
+    "serialNum": "x0y1z2a3-b4c5-4d6e-7f8g-h9i0j1k2l3m4",
+    "myCPU": "AMD Ryzen 7 5800X3D",
+    "cpuScore": 28300,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Kingston FURY Renegade 32GB",
+    "ramScore": 8960,
+    "totalScore": 150.34
+  },
+  {
+    "serialNum": "y1z2a3b4-c5d6-4e7f-8g9h-i0j1k2l3m4n5",
+    "myCPU": "Intel Core i9-12900K",
+    "cpuScore": 41474,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G.Skill Trident Z Royal 64GB",
+    "ramScore": 11200,
+    "totalScore": 178.58
+  },
+  {
+    "serialNum": "z2a3b4c5-d6e7-4f8g-9h0i-j1k2l3m4n5o6",
+    "myCPU": "AMD Ryzen 9 5900X",
+    "cpuScore": 39114,
+    "myGPU": "Radeon RX 6900 XT",
+    "gpuScore": 26791,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 174.71
+  },
+  {
+    "serialNum": "a3b4c5d6-e7f8-4g9h-0i1j-k2l3m4n5o6p7",
+    "myCPU": "Intel Core i5-12400F",
+    "cpuScore": 19527,
+    "myGPU": "GeForce RTX 3050 8GB",
+    "gpuScore": 12812,
+    "myRAM": "Crucial Ballistix 16GB",
+    "ramScore": 6720,
+    "totalScore": 82.72
+  },
+  {
+    "serialNum": "b4c5d6e7-f8g9-4h0i-1j2k-l3m4n5o6p7q8",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "c5d6e7f8-g9h0-4i1j-2k3l-m4n5o6p7q8r9",
+    "myCPU": "Intel Core i7-12700",
+    "cpuScore": 30769,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 145.85
+  },
+  {
+    "serialNum": "d6e7f8g9-h0i1-4j2k-3l4m-n5o6p7q8r9s0",
+    "myCPU": "AMD Ryzen 7 5700G",
+    "cpuScore": 24553,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.14
+  },
+  {
+    "serialNum": "e7f8g9h0-i1j2-4k3l-5m6n-o7p8q9r0s1t2",
+    "myCPU": "Intel Core i9-11900K @ 3.50GHz",
+    "cpuScore": 25230,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G.Skill Trident Z Neo 64GB",
+    "ramScore": 11200,
+    "totalScore": 162.83
+  },
+  {
+    "serialNum": "f8g9h0i1-j2k3-4l5m-6n7o-p8q9r0s1t2u3",
+    "myCPU": "AMD Ryzen 9 5900X",
+    "cpuScore": 39114,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 166.3
+  },
+  {
+    "serialNum": "g9h0i1j2-k3l4-5m6n-7o8p-q9r0s1t2u3v4",
+    "myCPU": "Intel Core i5-12400",
+    "cpuScore": 19362,
+    "myGPU": "GeForce RTX 3050 8GB",
+    "gpuScore": 12812,
+    "myRAM": "Crucial Ballistix 16GB",
+    "ramScore": 6720,
+    "totalScore": 82.56
+  },
+  {
+    "serialNum": "h0i1j2k3-l4m5-6n7o-8p9q-r0s1t2u3v4w5",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "i1j2k3l4-m5n6-7o8p-9q0r-s1t2u3v4w5x6",
+    "myCPU": "Intel Core i7-12700",
+    "cpuScore": 30769,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 145.85
+  },
+  {
+    "serialNum": "j2k3l4m5-n6o7-8p9q-0r1s-t2u3v4w5x6y7",
+    "myCPU": "AMD Ryzen 7 5700G",
+    "cpuScore": 24553,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.14
+  },
+  {
+    "serialNum": "k3l4m5n6-o7p8-9q0r-1s2t-u3v4w5x6y7z8",
+    "myCPU": "Intel Core i5-11400 @ 2.60GHz",
+    "cpuScore": 17011,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 79.99
+  },
+  {
+    "serialNum": "l4m5n6o7-p8q9-0r1s-2t3u-v4w5x6y7z8a9",
+    "myCPU": "AMD Ryzen 5 3600",
+    "cpuScore": 17748,
+    "myGPU": "Radeon RX 5600 XT",
+    "gpuScore": 13633,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 84.9
+  },
+  {
+    "serialNum": "m5n6o7p8-q9r0-1s2t-3u4v-w5x6y7z8a9b0",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.15
+  },
+  {
+    "serialNum": "n6o7p8q9-r0s1-2t3u-4v5w-x6y7z8a9b0c1",
+    "myCPU": "AMD Ryzen 9 5900X",
+    "cpuScore": 39114,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 166.3
+  },
+  {
+    "serialNum": "o7p8q9r0-s1t2-3u4v-5w6x-y7z8a9b0c1d2",
+    "myCPU": "Intel Core i9-11900K @ 3.50GHz",
+    "cpuScore": 25230,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G.Skill Trident Z Neo 64GB",
+    "ramScore": 11200,
+    "totalScore": 162.83
+  },
+  {
+    "serialNum": "p8q9r0s1-t2u3-4v5w-6x7y-z8a9b0c1d2e3",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.33
+  },
+  {
+    "serialNum": "q9r0s1t2-u3v4-5w6x-7y8z-a9b0c1d2e3f4",
+    "myCPU": "Intel Core i5-12600K",
+    "cpuScore": 27698,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.17
+  },
+  {
+    "serialNum": "r0s1t2u3-v4w5-6x7y-8z9a-b0c1d2e3f4g5",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.62
+  },
+  {
+    "serialNum": "s1t2u3v4-w5x6-7y8z-9a0b-c1d2e3f4g5h6",
+    "myCPU": "Intel Core i7-11700F @ 2.50GHz",
+    "cpuScore": 20996,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 136.37
+  },
+  {
+    "serialNum": "t2u3v4w5-x6y7-8z9a-0b1c-d2e3f4g5h6i7",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "u3v4w5x6-y7z8-9a0b-1c2d-e3f4g5h6i7j8",
+    "myCPU": "Intel Core i5-11400F @ 2.60GHz",
+    "cpuScore": 17029,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 80.01
+  },
+  {
+    "serialNum": "v4w5x6y7-z8a9-0b1c-2d3e-f4g5h6i7j8k9",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "w5x6y7z8-a9b0-1c2d-3e4f-g5h6i7j8k9l0",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.15
+  },
+  {
+    "serialNum": "x6y7z8a9-b0c1-2d3e-4f5g-h6i7j8k9l0m1",
+    "myCPU": "AMD Ryzen 9 5900X",
+    "cpuScore": 39114,
+    "myGPU": "Radeon RX 6800 XT",
+    "gpuScore": 25027,
+    "myRAM": "Corsair Dominator Platinum 64GB",
+    "ramScore": 11200,
+    "totalScore": 166.3
+  },
+  {
+    "serialNum": "y7z8a9b0-c1d2-3e4f-5g6h-i7j8k9l0m1n2",
+    "myCPU": "Intel Core i9-11900K @ 3.50GHz",
+    "cpuScore": 25230,
+    "myGPU": "GeForce RTX 3080 Ti",
+    "gpuScore": 27124,
+    "myRAM": "G.Skill Trident Z Neo 64GB",
+    "ramScore": 11200,
+    "totalScore": 162.83
+  },
+  {
+    "serialNum": "z8a9b0c1-d2e3-4f5g-6h7i-j8k9l0m1n2o3",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.33
+  },
+  {
+    "serialNum": "a9b0c1d2-e3f4-5g6h-7i8j-k9l0m1n2o3p4",
+    "myCPU": "Intel Core i5-12600K",
+    "cpuScore": 27698,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.17
+  },
+  {
+    "serialNum": "b0c1d2e3-f4g5-6h7i-8j9k-l0m1n2o3p4q5",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.62
+  },
+  {
+    "serialNum": "c1d2e3f4-g5h6-7i8j-9k0l-m1n2o3p4q5r6",
+    "myCPU": "Intel Core i7-11700F @ 2.50GHz",
+    "cpuScore": 20996,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 136.37
+  },
+  {
+    "serialNum": "d2e3f4g5-h6i7-8j9k-0l1m-n2o3p4q5r6s7",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "e3f4g5h6-i7j8-9k0l-1m2n-o3p4q5r6s7t8",
+    "myCPU": "Intel Core i5-11400 @ 2.60GHz",
+    "cpuScore": 17011,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 79.99
+  },
+  {
+    "serialNum": "f4g5h6i7-j8k9-0l1m-2n3o-p4q5r6s7t8u9",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "g5h6i7j8-k9l0-1m2n-3o4p-q5r6s7t8u9v0",
+    "myCPU": "Intel Core i7-12700",
+    "cpuScore": 30769,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Kingston FURY Beast 32GB",
+    "ramScore": 8960,
+    "totalScore": 145.85
+  },
+  {
+    "serialNum": "h6i7j8k9-l0m1-2n3o-4p5q-r6s7t8u9v0w1",
+    "myCPU": "AMD Ryzen 7 5700G",
+    "cpuScore": 24553,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.14
+  },
+  {
+    "serialNum": "i7j8k9l0-m1n2-3o4p-5q6r-s7t8u9v0w1x2",
+    "myCPU": "Intel Core i5-11400F @ 2.60GHz",
+    "cpuScore": 17029,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 80.01
+  },
+  {
+    "serialNum": "j8k9l0m1-n2o3-4p5q-6r7s-t8u9v0w1x2y3",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "GeForce RTX 3070 Ti",
+    "gpuScore": 23583,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 143.02
+  },
+  {
+    "serialNum": "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.17
+  },
+  {
+    "serialNum": "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 121.62
+  },
+  {
+    "serialNum": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    "myCPU": "Intel Core i5-12600K",
+    "cpuScore": 27698,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.17
+  },
+  {
+    "serialNum": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+    "myCPU": "Intel Core i7-10700K @ 3.80GHz",
+    "cpuScore": 18779,
+    "myGPU": "GeForce RTX 2070 SUPER",
+    "gpuScore": 18228,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 108.71
+  },
+  {
+    "serialNum": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+    "myCPU": "Intel Core i5-11400F @ 2.60GHz",
+    "cpuScore": 17029,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 80.79
+  },
+  {
+    "serialNum": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+    "myCPU": "AMD Ryzen 7 5800",
+    "cpuScore": 25761,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 123.31
+  },
+  {
+    "serialNum": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5",
+    "myCPU": "Intel Core i7-11700F @ 2.50GHz",
+    "cpuScore": 20996,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 121.67
+  },
+  {
+    "serialNum": "k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.62
+  },
+  {
+    "serialNum": "l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7",
+    "myCPU": "Intel Core i5-12600KF",
+    "cpuScore": 27908,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.37
+  },
+  {
+    "serialNum": "m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8",
+    "myCPU": "AMD Ryzen 7 5700G",
+    "cpuScore": 24553,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 122.14
+  },
+  {
+    "serialNum": "n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9",
+    "myCPU": "Intel Core i7-10700 @ 2.90GHz",
+    "cpuScore": 16391,
+    "myGPU": "GeForce RTX 2070 SUPER",
+    "gpuScore": 18228,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 106.39
+  },
+  {
+    "serialNum": "o5p6q7r8-s9t0-u1v2-w3x4-y5z6a7b8c9d0",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1",
+    "myCPU": "Intel Core i5-11400 @ 2.60GHz",
+    "cpuScore": 17011,
+    "myGPU": "GeForce GTX 1660 SUPER",
+    "gpuScore": 12752,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 79.99
+  },
+  {
+    "serialNum": "q7r8s9t0-u1v2-w3x4-y5z6-a7b8c9d0e1f2",
+    "myCPU": "AMD Ryzen 7 5800X",
+    "cpuScore": 27848,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.33
+  },
+  {
+    "serialNum": "r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3",
+    "myCPU": "Intel Core i7-11700K @ 3.60GHz",
+    "cpuScore": 24585,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 125.15
+  },
+  {
+    "serialNum": "s9t0u1v2-w3x4-y5z6-a7b8-c9d0e1f2g3h4",
+    "myCPU": "AMD Ryzen 5 5600",
+    "cpuScore": 21575,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.32
+  },
+  {
+    "serialNum": "t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5",
+    "myCPU": "Intel Core i5-12600K",
+    "cpuScore": 27698,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.17
+  },
+  {
+    "serialNum": "u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  },
+  {
+    "serialNum": "v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7",
+    "myCPU": "Intel Core i7-10700K @ 3.80GHz",
+    "cpuScore": 18779,
+    "myGPU": "GeForce RTX 2070 SUPER",
+    "gpuScore": 18228,
+    "myRAM": "G.Skill Ripjaws V 32GB",
+    "ramScore": 8960,
+    "totalScore": 108.71
+  },
+  {
+    "serialNum": "w3x4y5z6-a7b8-c9d0-e1f2-g3h4i5j6k7l8",
+    "myCPU": "AMD Ryzen 5 5600X",
+    "cpuScore": 21888,
+    "myGPU": "Radeon RX 6600 XT",
+    "gpuScore": 16509,
+    "myRAM": "Corsair Vengeance LPX 16GB",
+    "ramScore": 6720,
+    "totalScore": 102.62
+  },
+  {
+    "serialNum": "x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9",
+    "myCPU": "Intel Core i5-11400F @ 2.60GHz",
+    "cpuScore": 17029,
+    "myGPU": "GeForce GTX 1660 Ti",
+    "gpuScore": 12916,
+    "myRAM": "G.Skill Ripjaws V 16GB",
+    "ramScore": 6720,
+    "totalScore": 80.79
+  },
+  {
+    "serialNum": "y5z6a7b8-c9d0-e1f2-g3h4-i5j6k7l8m9n0",
+    "myCPU": "AMD Ryzen 7 5800",
+    "cpuScore": 25761,
+    "myGPU": "Radeon RX 6700 XT",
+    "gpuScore": 19871,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 123.31
+  },
+  {
+    "serialNum": "z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1",
+    "myCPU": "Intel Core i7-11700F @ 2.50GHz",
+    "cpuScore": 20996,
+    "myGPU": "GeForce RTX 3060 Ti",
+    "gpuScore": 20496,
+    "myRAM": "G.Skill Trident Z RGB 32GB",
+    "ramScore": 8960,
+    "totalScore": 121.67
+  },
+  {
+    "serialNum": "a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2",
+    "myCPU": "AMD Ryzen 7 5700X",
+    "cpuScore": 26658,
+    "myGPU": "Radeon RX 6750 XT",
+    "gpuScore": 20793,
+    "myRAM": "Corsair Vengeance LPX 32GB",
+    "ramScore": 8960,
+    "totalScore": 128.57
+  }
+]

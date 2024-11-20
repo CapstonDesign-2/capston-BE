@@ -11,6 +11,9 @@ module.exports = class Game extends Sequelize.Model {
             gameName: {
                 type: DataTypes.STRING(100),
             },
+            gameThumbnail: {
+                type: DataTypes.STRING(100),
+            },
             recommendedCPUScore: {
                 type: DataTypes.INTEGER,
             },
