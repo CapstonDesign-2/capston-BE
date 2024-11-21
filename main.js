@@ -24,7 +24,9 @@ const port = process.env.PORT || 4000;
 // CORS 미들웨어 설정
 app.use(cors({
     // origin: true, // 로컬 테스트용
-    origin: 'https://lustrous-starburst-fc4ad8.netlify.app/', // 허용할 프론트엔드 도메인
+    origin: 'https://lustrous-starburst-fc4ad8.netlify.app', // 허용할 프론트엔드 도메인
+    credential: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
