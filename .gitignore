@@ -190,4 +190,4 @@ $RECYCLE.BIN/
 mariadb_data
 
 # docker-compose
-*.yml
+# *.yml
