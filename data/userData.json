@@ -1898,5 +1898,25 @@
     "myRAM": "Corsair Vengeance LPX 32GB",
     "ramScore": 8960,
     "totalScore": 128.57
+  },
+  {
+    "serialNum": "7a:79:19:16:5d:3b",
+    "myCPU": "AMD Ryzen 7 2700X",
+    "cpuScore": 17518,
+    "myGPU": "GeForce RTX 2060",
+    "gpuScore": 14147,
+    "myRAM": "Samsung M425R1GB4PB0-CWMOD 8GB x4",
+    "ramScore": 23832,
+    "totalScore": 98.48
+  },
+  {
+    "serialNum": "b4:2e:99:9d:cd:2e",
+    "myCPU": "AMD Ryzen 5 3500",
+    "cpuScore": 12785,
+    "myGPU": "GeForce GTX 1650 SUPER",
+    "gpuScore": 10161,
+    "myRAM": "Samsung M425R1GB4PB0-CWMOD 8GB x2",
+    "ramScore": 20611,
+    "totalScore": 80.13
   }
 ]

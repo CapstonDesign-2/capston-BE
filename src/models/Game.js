@@ -12,13 +12,23 @@ module.exports = class Game extends Sequelize.Model {
                 type: DataTypes.STRING(100),
             },
             gameThumbnail: {
-                type: DataTypes.STRING(100),
+                type: DataTypes.STRING(200),
             },
             recommendedCPUScore: {
                 type: DataTypes.INTEGER,
             },
             recommendedGPUScore: {
                 type: DataTypes.INTEGER,
+            },
+            recommendedRAMScore: {
+                type: DataTypes.FLOAT,
+                allowNull: false,
+                defaultValue: 0
+            },
+            recommendedTotalScore: {
+                type: DataTypes.FLOAT,
+                allowNull: false,
+                defaultValue: 0
             },
             minimumCPUScore: {
                 type: DataTypes.INTEGER,
@@ -27,7 +37,12 @@ module.exports = class Game extends Sequelize.Model {
                 type: DataTypes.INTEGER,
             },
             minimumRAMScore: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
+                allowNull: false
+            },
+            minimumTotalScore: {
+                type: DataTypes.FLOAT,
+                allowNull: false
             },
             maximumCPUScore: {
                 type: DataTypes.INTEGER,
@@ -35,14 +50,14 @@ module.exports = class Game extends Sequelize.Model {
             maximumGPUScore: {
                 type: DataTypes.INTEGER,
             },
-            minimumTotalScore: {
-                type: DataTypes.INTEGER,
-            },
-            recommendedTotalScore: {
-                type: DataTypes.INTEGER,
+            maximumRAMScore: {
+                type: DataTypes.FLOAT,
+                allowNull: false,
+                defaultValue: 0
             },
             maximumTotalScore: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
+                allowNull: false
             },
             matchedHardware: {
                 type: DataTypes.JSON,

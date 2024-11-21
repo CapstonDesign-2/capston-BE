@@ -1,37 +1,32 @@
 const db = require('../index');
-const { matchHardwareNames, hardwareCache, hardwareMatcher } = require('./nameMatchController');
+const { gameSpecNameMatching } = require('./nameMatchController');
+const { calculateGameSpecScores, calculateGameSpecRamScore } = require('./scoreController');
 const { Op } = require('sequelize');
 const { saveGameData } = require('../utils/gameData');
 
-const calculateSpecScores = async (specs, ramScore, matchedHardware) => {
+const calculateSpecScores = async (specs, ramGB, matchedHardware) => {
     const cpuResults = [];
     const gpuResults = [];
 
-    // GPU 매칭 및 점수 계산
-    for (const gpuName of specs.gpus) {
-        const result = await matchHardwareNames({
-            cpu: 'dummy',
-            gpu: gpuName,
-            ram: '4GB'
-        });
-        
-        if (result.success && result.hardware.gpu) {
-            gpuResults.push(result.hardware.gpu.gpuScore);
-            matchedHardware.gpus.push(result.hardware.gpu);
-        }
-    }
+    // CPU와 GPU 동시에 매칭
+    for (let i = 0; i < Math.max(specs.cpus.length, specs.gpus.length); i++) {
+        if (!specs.cpus[i] && !specs.gpus[i]) continue;
 
-    // CPU 매칭 및 점수 계산
-    for (const cpuName of specs.cpus) {
-        const result = await matchHardwareNames({
-            cpu: cpuName,
-            gpu: 'dummy',
-            ram: '4GB'
+        const result = await gameSpecNameMatching({
+            cpu: specs.cpus[i] || undefined,
+            gpu: specs.gpus[i] || undefined
         });
         
-        if (result.success && result.hardware.cpu) {
+        // CPU 결과 처리
+        if (specs.cpus[i] && result.hardware.cpu) {
             cpuResults.push(result.hardware.cpu.cpuScore);
             matchedHardware.cpus.push(result.hardware.cpu);
+        }
+
+        // GPU 결과 처리
+        if (specs.gpus[i] && result.hardware.gpu) {
+            gpuResults.push(result.hardware.gpu.gpuScore);
+            matchedHardware.gpus.push(result.hardware.gpu);
         }
     }
 
@@ -41,66 +36,37 @@ const calculateSpecScores = async (specs, ramScore, matchedHardware) => {
     const avgGpuScore = gpuResults.length > 0 ? 
         gpuResults.reduce((sum, score) => sum + score, 0) / gpuResults.length : 0;
 
-    // CPU나 GPU 중 하나라도 비어있으면 totalScore를 0으로 설정
+    // RAM 점수 계산 (기존 calculateGameSpecRamScore 함수 사용)
+    const ramScore = calculateGameSpecRamScore(ramGB);
+
+    // 최종 점수 계산 (기존 calculateGameSpecScores 함수 사용)
     const totalScore = (!specs.cpus.length || !specs.gpus.length) ? 0 :
-        (avgCpuScore * 0.3) + (avgGpuScore * 0.5) + (ramScore * 0.2);
+        await calculateGameSpecScores(avgCpuScore, avgGpuScore, ramScore);
 
     return {
         avgCpuScore: isNaN(avgCpuScore) ? 0 : avgCpuScore,
         avgGpuScore: isNaN(avgGpuScore) ? 0 : avgGpuScore,
-        totalScore: isNaN(totalScore) ? 0 : Math.round(totalScore * 100) / 100
+        ramScore: ramScore,
+        totalScore: isNaN(totalScore) ? 0 : totalScore
     };
-};
-
-const calculateRamScore = async (targetGB) => {
-    try {
-        if (!hardwareCache.ram) {
-            await hardwareMatcher.initializeCache();
-        }
-
-        // RAM 용량에 맞는 항목들 찾기
-        const matchingRAMs = hardwareCache.ram.filter(ram => {
-            const ramName = ram.ramName.toLowerCase();
-            return ramName.includes(`${targetGB}gb`) || ramName.includes(`${targetGB} gb`);
-        });
-
-        if (matchingRAMs.length === 0) {
-            console.log(`${targetGB}GB RAM을 찾을 수 없습니다.`);
-            return null;
-        }
-
-        // 평균 점수 계산
-        const avgScore = matchingRAMs.reduce((sum, ram) => sum + ram.ramScore, 0) / matchingRAMs.length;
-        
-        console.log(`${targetGB}GB RAM 매칭 결과:`);
-        console.log('매칭된 RAM 개수:', matchingRAMs.length);
-        console.log('평균 점수:', avgScore);
-        
-        return avgScore;
-    } catch (error) {
-        console.error('RAM 점수 계산 중 오류:', error);
-        return null;
-    }
 };
 
 const createGameSpec = async (req, res) => {
     try {
-        const { gameName, minSpecs, recommendedSpecs, highSpecs, ramGB } = req.body;
+        const { gameName, gameThumbnail, minSpecs, recommendedSpecs, highSpecs } = req.body;
 
-        // 매칭된 하드웨어 정보를 저장할 객체
         const matchedHardware = {
             minimum: { cpus: [], gpus: [] },
             recommended: { cpus: [], gpus: [] },
             maximum: { cpus: [], gpus: [] }
         };
 
-        // RAM 점수 계산
-        const avgRamScore = await calculateRamScore(ramGB);
-
-        // 최소, 권장, 최고 사양 점수 계산
-        const minScores = await calculateSpecScores(minSpecs, avgRamScore, matchedHardware.minimum);
-        const recommendedScores = await calculateSpecScores(recommendedSpecs, avgRamScore, matchedHardware.recommended);
-        const maxScores = await calculateSpecScores(highSpecs, avgRamScore, matchedHardware.maximum);
+        // 각 사양별 점수 계산
+        const minScores = await calculateSpecScores(minSpecs, minSpecs.ramGB, matchedHardware.minimum);
+        const recommendedScores = await calculateSpecScores(recommendedSpecs, recommendedSpecs.ramGB, matchedHardware.recommended);
+        const maxScores = highSpecs.cpus.length || highSpecs.gpus.length ? 
+            await calculateSpecScores(highSpecs, highSpecs.ramGB, matchedHardware.maximum) :
+            { avgCpuScore: 0, avgGpuScore: 0, ramScore: 0, totalScore: 0 };
 
         // 이미 존재하는 게임 찾기
         let game = await db.Game.findOne({ where: { gameName } });
@@ -108,16 +74,18 @@ const createGameSpec = async (req, res) => {
         // 게임 데이터 생성 또는 업데이트
         const gameData = {
             gameName,
-            gameThumbnail: `${gameName.toLowerCase().replace(/ /g, '')}.jpg`,
+            gameThumbnail,
             minimumCPUScore: minScores.avgCpuScore,
             minimumGPUScore: minScores.avgGpuScore,
-            minimumRAMScore: avgRamScore,
+            minimumRAMScore: minScores.ramScore,
             minimumTotalScore: minScores.totalScore,
             recommendedCPUScore: recommendedScores.avgCpuScore,
             recommendedGPUScore: recommendedScores.avgGpuScore,
+            recommendedRAMScore: recommendedScores.ramScore,
             recommendedTotalScore: recommendedScores.totalScore,
             maximumCPUScore: maxScores.avgCpuScore,
             maximumGPUScore: maxScores.avgGpuScore,
+            maximumRAMScore: maxScores.ramScore,
             maximumTotalScore: maxScores.totalScore
         };
 
@@ -132,22 +100,21 @@ const createGameSpec = async (req, res) => {
         // 게임 데이터를 JSON 파일에도 저장
         saveGameData({
             ...gameData,
-            thumbnail: gameData.gameThumbnail,
             matchedHardware: {
                 minimum: {
                     cpus: matchedHardware.minimum.cpus.map(cpu => cpu.cpuName),
                     gpus: matchedHardware.minimum.gpus.map(gpu => gpu.gpuName),
-                    ram: `${ramGB}GB`
+                    ram: `${minSpecs.ramGB}GB`
                 },
                 recommended: {
                     cpus: matchedHardware.recommended.cpus.map(cpu => cpu.cpuName),
                     gpus: matchedHardware.recommended.gpus.map(gpu => gpu.gpuName),
-                    ram: `${ramGB}GB`
+                    ram: `${recommendedSpecs.ramGB}GB`
                 },
                 maximum: {
                     cpus: matchedHardware.maximum.cpus.map(cpu => cpu.cpuName),
                     gpus: matchedHardware.maximum.gpus.map(gpu => gpu.gpuName),
-                    ram: `${ramGB}GB`
+                    ram: `${highSpecs.ramGB}GB`
                 }
             }
         });
@@ -158,31 +125,34 @@ const createGameSpec = async (req, res) => {
             game: {
                 gameId: game.gameId,
                 gameName: game.gameName,
+                gameThumbnail: game.gameThumbnail,
                 minimumCPUScore: game.minimumCPUScore,
                 minimumGPUScore: game.minimumGPUScore,
                 minimumRAMScore: game.minimumRAMScore,
                 minimumTotalScore: game.minimumTotalScore,
                 recommendedCPUScore: game.recommendedCPUScore,
                 recommendedGPUScore: game.recommendedGPUScore,
+                recommendedRAMScore: game.recommendedRAMScore,
                 recommendedTotalScore: game.recommendedTotalScore,
                 maximumCPUScore: game.maximumCPUScore,
                 maximumGPUScore: game.maximumGPUScore,
+                maximumRAMScore: game.maximumRAMScore,
                 maximumTotalScore: game.maximumTotalScore,
                 matchedHardware: {
                     minimum: {
                         cpus: matchedHardware.minimum.cpus.map(cpu => cpu.cpuName),
                         gpus: matchedHardware.minimum.gpus.map(gpu => gpu.gpuName),
-                        ram: `${ramGB}GB`
+                        ram: `${minSpecs.ramGB}GB`
                     },
                     recommended: {
                         cpus: matchedHardware.recommended.cpus.map(cpu => cpu.cpuName),
                         gpus: matchedHardware.recommended.gpus.map(gpu => gpu.gpuName),
-                        ram: `${ramGB}GB`
+                        ram: `${recommendedSpecs.ramGB}GB`
                     },
                     maximum: {
                         cpus: matchedHardware.maximum.cpus.map(cpu => cpu.cpuName),
                         gpus: matchedHardware.maximum.gpus.map(gpu => gpu.gpuName),
-                        ram: `${ramGB}GB`
+                        ram: `${highSpecs.ramGB}GB`
                     }
                 },
                 createdAt: game.createdAt,
@@ -202,6 +172,5 @@ const createGameSpec = async (req, res) => {
 // 함수들을 export
 module.exports = {
     createGameSpec,
-    calculateSpecScores,
-    calculateRamScore
+    calculateSpecScores
 }; 

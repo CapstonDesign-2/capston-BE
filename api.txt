@@ -1,0 +1,109 @@
+http://localhost:4000/api/gamespec
+
+{
+    "gameName": "리그오브레전드",
+    "gameThumbnail": "https://cdn.ggilbo.com/news/photo/202208/927547_759590_3425.png",
+    "minSpecs": {
+        "cpus": [
+            "Intel Core i3-530",
+            "AMD: A6-3650"
+        ],
+        "gpus": [
+            "NVIDIA: GeForce 9600GT",
+            "AMD: HD 6570",
+	        "Intel: HD 4600 내장 그래픽"
+        ],
+        "ramGB": 2
+    },
+    "recommendedSpecs": {
+        "cpus": [
+            "Intel Core i5-3300",
+            "AMD: Ryzen 3 1200"
+        ],
+        "gpus": [
+            "NVIDIA: GeForce 560",
+            "AMD: Radeon HD 6950",
+            "Intel: UHD 630"
+        ],
+        "ramGB": 4
+    },
+    "highSpecs": {
+        "cpus": [],
+        "gpus": [],
+        "ramGB": []
+    }
+}
+
+{
+    "gameName": "오버워치",
+    "gameThumbnail": "https://i.namu.wiki/i/2NhbPFwj28v-TPcQp7Cgxy8wKNzT8ET6jvEhMblx5PqPe-lIE1Iu2bT0qVMhCTSoihfXdEcFpeJxsODhycMVyQ.webp",
+    "minSpecs": {
+        "cpus": [
+            "Intel® Core™ i3",
+            "AMD Phenom™ X3 8650"
+        ],
+        "gpus": [
+            "NVIDIA® GeForce® GTX 600",
+            "AMD Radeon™ HD 7000"
+        ],
+        "ramGB": 6
+    },
+    "recommendedSpecs": {
+        "cpus": [
+            "Intel® Core™ i7",
+            "AMD: Ryzen 3 1200"
+        ],
+        "gpus": [
+            "NVIDIA® GeForce® GTX 1060",
+            "GeForce® GTX 1650",
+            "AMD R9 380",
+            "AMD RX 6400",
+            "Intel@ Arc A770"
+        ],
+        "ramGB": 8
+    },
+    "highSpecs": {
+        "cpus": [],
+        "gpus": [],
+        "ramGB": []
+    }
+}
+
+{
+    "gameName": "오버워치",
+    "gameThumbnail": "https://t1.daumcdn.net/news/202209/19/poctan/20220919145311511jsbi.jpg",
+    "minSpecs": {
+        "cpus": [
+            "Intel Core 2 Duo",
+            "E8400 (Intel)",
+            "Athlon 200GE (AMD)"
+        ],
+        "gpus": [
+            "Intel HD 4000",
+            "Radeon R5 200"
+        ],
+        "ramGB": 4
+    },
+    "recommendedSpecs": {
+        "cpus": [
+            "Intel i3-4150 (Intel)",
+            "Ryzen 3 1200 (AMD)"
+        ],
+        "gpus": [
+            "Geforce GT 730",
+            "Radeon R7 240"
+        ],
+        "ramGB": 4
+    },
+    "highSpecs": {
+        "cpus": [
+            "Intel i5-9400F",
+            "Ryzen 5 2600X"
+        ],
+        "gpus": [
+            "GTX 1050 Ti",
+            "Radeon R7 370"
+        ],
+        "ramGB": 4
+    }
+}

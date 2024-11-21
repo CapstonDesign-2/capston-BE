@@ -50,7 +50,24 @@ const calculateMyScore = async (req, res) => {
                 // 각 점수를 기준 점수로 정규화
                 const normalizedCpuScore = (cpu.cpuScore / baseScore.cpuBaseScore) * 100;
                 const normalizedGpuScore = (gpu.gpuScore / baseScore.gpuBaseScore) * 100;
-                const normalizedRamScore = (ram.ramScore / baseScore.ramBaseScore) * 100;
+
+                // RAM 점수 정규화 수정
+                let normalizedRamScore;
+                if (ram.ramCount && ram.ramCount > 1) {
+                    // 듀얼채널 보너스 조정: 추가 RAM당 15% 추가 성능으로 줄임
+                    const dualChannelBonus = 1 + ((ram.ramCount - 1) * 0.15);
+                    
+                    // 평균 점수 계산 후 보너스 적용
+                    normalizedRamScore = ((ram.ramScore / ram.ramCount) / baseScore.ramBaseScore) * 100 * dualChannelBonus;
+                    
+                    // 최대 보너스 제한 (원래 점수의 2배를 넘지 않도록)
+                    normalizedRamScore = Math.min(normalizedRamScore, 200);
+                } else {
+                    normalizedRamScore = (ram.ramScore / baseScore.ramBaseScore) * 100;
+                }
+
+                // 추가: normalizedRamScore가 너무 높은 경우 제한
+                normalizedRamScore = Math.min(normalizedRamScore, 150); // 최대 150%로 제한
 
                 // 패널티 기준치 설정
                 const penaltyThreshold = 40; // 기준 점수의 40% 미만일 경우
@@ -94,6 +111,8 @@ const calculateMyScore = async (req, res) => {
                 // 소수점 둘째자리까지 반올림
                 const roundedScore = Math.round(totalScore * 100) / 100;
 
+                const adjustedRamScore = Math.round(ram.ramScore * 0.5); // RAM 점수를 절반으로 조정
+
                 // 계산된 유저 데이터
                 const userData = {
                     serialNum: hardwareData.deviceId,
@@ -102,7 +121,7 @@ const calculateMyScore = async (req, res) => {
                     myGPU: gpu.gpuName,
                     gpuScore: gpu.gpuScore,
                     myRAM: ram.ramName,
-                    ramScore: ram.ramScore,
+                    ramScore: adjustedRamScore,  // 조정된 RAM 점수
                     totalScore: roundedScore
                 };
 
@@ -167,6 +186,89 @@ const calculateMyScore = async (req, res) => {
     }
 };
 
+// RAM 평균 점수 계산 함수 추가
+const calculateAverageRAMScore = (matchingRAMs) => {
+    if (!matchingRAMs || matchingRAMs.length === 0) {
+        return null;
+    }
+
+    const totalScore = matchingRAMs.reduce((sum, ram) => {
+        return sum + parseFloat(ram.ramScore);
+    }, 0);
+
+    return totalScore / matchingRAMs.length;
+};
+
+const calculateGameSpecScores = async (cpuScore, gpuScore, ramScore) => {
+    try {
+        // baseScore 가져오기
+        const baseScore = await BaseScore.findOne({ where: { baseScoreId: 1 } });
+        if (!baseScore) {
+            throw new Error('기준 점수를 찾을 수 없습니다.');
+        }
+
+        // 점수 정규화
+        const normalizedCpuScore = (cpuScore / baseScore.cpuBaseScore) * 100;
+        const normalizedGpuScore = (gpuScore / baseScore.gpuBaseScore) * 100;
+        const normalizedRamScore = (ramScore / baseScore.ramBaseScore) * 100;
+
+        // 패널티 적용
+        const penaltyThreshold = 40;
+        const penaltyMultiplier = 0.5;
+        const applyPenalty = (score) => {
+            if (score < penaltyThreshold) {
+                return score * penaltyMultiplier;
+            }
+            return score;
+        };
+
+        const penalizedCpuScore = applyPenalty(normalizedCpuScore);
+        const penalizedGpuScore = applyPenalty(normalizedGpuScore);
+        const penalizedRamScore = applyPenalty(normalizedRamScore);
+
+        // 가중치 적용
+        const cpuWeight = 0.3;
+        const gpuWeight = 0.5;
+        const ramWeight = 0.2;
+
+        const totalScore = (
+            penalizedCpuScore * cpuWeight +
+            penalizedGpuScore * gpuWeight +
+            penalizedRamScore * ramWeight
+        );
+
+        return Math.round(totalScore * 100) / 100;
+    } catch (error) {
+        console.error('게임 스펙 점수 계산 중 오류:', error);
+        throw error;
+    }
+};
+
+const calculateGameSpecRamScore = (ramGB) => {
+    // 기본 점수 계산 (1GB당 280점)
+    let baseScore = ramGB * 1640;
+    
+    // RAM 크기에 따른 패널티/보너스 적용
+    if (ramGB < 8) {
+        // 8GB 미만: 20% 패널티
+        baseScore *= 0.8;
+    } else if (ramGB < 16) {
+        // 8GB-16GB: 10% 패널티
+        baseScore *= 0.9;
+    } else if (ramGB > 32) {
+        // 32GB 초과: 추가 GB당 점수 50% 감소
+        const baseGB32Score = 32 * 280;  // 32GB까지의 기본 점수
+        const additionalGB = ramGB - 32;  // 32GB 초과분
+        const additionalScore = additionalGB * 140;  // 초과분에 대해 50% 감소된 점수
+        baseScore = baseGB32Score + additionalScore;
+    }
+
+    return Math.round(baseScore);
+};
+
 module.exports = {
-    calculateMyScore
+    calculateMyScore,
+    calculateAverageRAMScore,
+    calculateGameSpecScores,
+    calculateGameSpecRamScore  // 새로운 함수 export
 }; 

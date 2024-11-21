@@ -167,9 +167,7 @@ async function matchHardwareNames(hardwareData) {
     const cpuNames = cpuData
         .filter(cpu => cpu && cpu.CPUName) // null 체크 추가
         .map(cpu => cpu.CPUName);
-    
-    console.log('사용 가능한 CPU 이름 수:', cpuNames.length);
-    console.log('첫 번째 CPU 이름:', cpuNames[0]);
+
 
     const cpuMatch = findBestMatch(
         hardwareData.cpu,
@@ -183,11 +181,13 @@ async function matchHardwareNames(hardwareData) {
             cpuName: cpuMatch.name,
             cpuScore: parseFloat(cpuInfo.CPUScore)
         };
+        console.log('CPU Match found:', result.hardware.cpu);
     } else {
         result.notFound.push('cpu');
     }
 
     // GPU 매칭
+    console.log('Matching GPU:', hardwareData.gpu);
     const gpuMatch = findBestMatch(
         hardwareData.gpu,
         gpuData.map(gpu => gpu.GPUName),
@@ -200,100 +200,58 @@ async function matchHardwareNames(hardwareData) {
             gpuName: gpuMatch.name,
             gpuScore: parseFloat(gpuInfo.GPUScore)
         };
+        console.log('GPU Match found:', result.hardware.gpu);
     } else {
         result.notFound.push('gpu');
     }
 
-    // RAM 매칭 부분 수정
-    const ramMatch = async (ramString) => {
-        // RAM 이름 목록 추출
-        const ramNames = ramData
-            .filter(ram => ram && ram.ramName)
-            .map(ram => ram.ramName);
+    // RAM 매칭
+    if (hardwareData.ram) {
+        console.log('Matching RAM:', hardwareData.ram);
+        
+        // 콤마로 구분된 RAM 처리
+        const ramParts = hardwareData.ram.split(',').map(part => part.trim());
+        let totalRamScore = 0;
+        let matchedRamNames = [];
+        let ramCount = ramParts.length;
 
-        const ramParts = ramString.split(',').map(part => part.trim());
-        let baseScore = 0;
-        let matchedNames = [];
-
-        // 각 RAM의 용량 추출
-        let totalRamSize = 0;
-        const ramSizes = [];
         for (const ramPart of ramParts) {
-            const ramSize = extractRAMSize(ramPart);
-            totalRamSize += ramSize;
-            ramSizes.push(ramSize);
-            
-            const match = findBestMatch(
+            const ramMatch = findBestMatch(
                 ramPart,
-                ramNames,
-                0.6
+                ramData.map(ram => ram.ramName),
+                0.65
             );
 
-            if (match) {
-                matchedNames.push(match.name);
-            } else {
-                matchedNames.push(ramPart);
+            if (ramMatch) {
+                const ramInfo = ramData.find(ram => ram.ramName === ramMatch.name);
+                totalRamScore += parseFloat(ramInfo.ramScore);
+                matchedRamNames.push(ramMatch.name);
             }
         }
 
-        // 전체 RAM 용량에 대한 기본 점수 계산
-        baseScore = calculateRAMScore(totalRamSize);
-
-        // RAM 구성에 따른 효율성 계산 (패널티 강화)
-        const calculateEfficiencyMultiplier = (sizes) => {
-            if (sizes.length === 1) {
-                return 0.7; // 30% 패널티
+        if (matchedRamNames.length > 0) {
+            // 첫 번째 RAM의 기본 점수
+            let baseRamScore = parseFloat(ramData.find(ram => ram.ramName === matchedRamNames[0]).ramScore);
+            
+            // RAM 개수에 따른 성능 증가율 계산
+            let totalRamScore = baseRamScore;
+            if (ramCount > 1) {
+                // 2개: 80% 추가, 3개: 20% 추가, 4개: 10% 추가
+                const performanceMultipliers = [1, 1.6, 1.8, 1.85];  // 인덱스가 (RAM 개수 - 1)
+                totalRamScore = baseRamScore * performanceMultipliers[Math.min(ramCount - 1, 3)];
             }
 
-            const isSymmetric = sizes.every(size => size === sizes[0]);
-            const isEvenCount = sizes.length % 2 === 0;
-
-            if (isSymmetric && isEvenCount) {
-                return 1.0;
-            } else if (isEvenCount) {
-                return 0.85; // 15% 패널티
-            } else {
-                return 0.75; // 25% 패널티
-            }
-        };
-
-        // RAM 개수에 따른 증가율 (매우 낮게 조정)
-        const getMultiplierByCount = (count) => {
-            switch(count) {
-                case 1: return 1.0;
-                case 2: return 1.03; // 3% 증가
-                case 3: return 1.05; // 5% 증가
-                case 4: return 1.07; // 7% 증가
-                default: return 1.08; // 최대 8% 증가
-            }
-        };
-
-        const countMultiplier = getMultiplierByCount(ramParts.length);
-        const efficiencyMultiplier = calculateEfficiencyMultiplier(ramSizes);
-        const totalScore = baseScore * countMultiplier * efficiencyMultiplier;
-
-        // RAM 이름을 더 간단하게 표시
-        const simplifyRamName = (ramParts) => {
-            if (ramParts.length <= 1) return ramParts[0];
-            const firstRam = ramParts[0];
-            return `${firstRam} (${ramParts.length}x)`;
-        };
-
-        return {
-            ramName: simplifyRamName(matchedNames),
-            ramScore: totalScore
-        };
-    };
-
-    if (hardwareData.ram) {
-        console.log('Matching RAM:', hardwareData.ram);
-        result.hardware.ram = await ramMatch(hardwareData.ram);
-        console.log('RAM Match found:', result.hardware.ram);
-    } else {
-        result.notFound.push('ram');
+            result.hardware.ram = {
+                ramName: `${matchedRamNames[0]} x${ramCount}`,
+                ramScore: Math.round(totalRamScore),
+                ramCount: ramCount
+            };
+            console.log('RAM Match found:', result.hardware.ram);
+        } else {
+            result.notFound.push('ram');
+        }
     }
 
-    // 결과 처리
     if (result.notFound.length > 0) {
         result.success = false;
         result.message = '일부 하드웨어를 찾을 수 없습니다.';
@@ -302,33 +260,164 @@ async function matchHardwareNames(hardwareData) {
     return result;
 }
 
-// RAM 용량 추출 함수 개선
-function extractRAMSize(ramString) {
-    // 여러 개의 RAM이 있는 경우 합산
-    const matches = ramString.match(/(\d+)\s*GB/gi);
-    if (!matches) return 8; // 기본값 8GB
-    
-    const totalSize = matches.reduce((sum, match) => {
-        const size = parseInt(match);
-        return sum + (isNaN(size) ? 0 : size);
-    }, 0);
-    
-    return totalSize || 8; // 합산이 0이면 기본값 8GB 반환
-}
 
-// RAM 점수 계산 함수 개선
-function calculateRAMScore(ramSize) {
-    // 용량별 점수 계산을 더 낮은 비율로 조정
-    const getScoreBySize = (size) => {
-        if (size <= 8) return size * 800;           // 8GB = 6400점
-        if (size <= 16) return 6400 + (size - 8) * 400;  // 16GB = 9600점
-        if (size <= 32) return 9600 + (size - 16) * 200; // 32GB = 12800점
-        return 12800 + (size - 32) * 100;          // 32GB 초과는 매우 낮은 증가율
+async function gameSpecNameMatching(hardwareData) {
+    const result = {
+        success: true,
+        hardware: {
+            cpu: null,
+            gpu: null
+        },
+        notFound: []
     };
 
-    return getScoreBySize(ramSize);
+    // CPU 매칭
+    if (hardwareData.cpu) {
+        console.log('Matching CPU:', hardwareData.cpu);
+        let matchedCPUs = [];
+        const cpuInput = hardwareData.cpu.toLowerCase();
+
+        // 시리즈만 있는 경우 체크
+        const cpuSeriesPatterns = {
+            'ryzen 3': /^(amd\s*)?ryzen\s*3$/i,
+            'ryzen 5': /^(amd\s*)?ryzen\s*5$/i,
+            'ryzen 7': /^(amd\s*)?ryzen\s*7$/i,
+            'ryzen 9': /^(amd\s*)?ryzen\s*9$/i,
+            'core i3': /^(intel\s*)?core\s*i3$/i,
+            'core i5': /^(intel\s*)?core\s*i5$/i,
+            'core i7': /^(intel\s*)?core\s*i7$/i,
+            'core i9': /^(intel\s*)?core\s*i9$/i
+        };
+
+        let isSeriesOnly = false;
+        let matchedSeries = '';
+
+        // 시리즈만 있는지 확인
+        for (const [series, pattern] of Object.entries(cpuSeriesPatterns)) {
+            if (pattern.test(cpuInput)) {
+                isSeriesOnly = true;
+                matchedSeries = series;
+                break;
+            }
+        }
+
+        if (isSeriesOnly) {
+            // 시리즈만 있는 경우 해당 시리즈의 모든 CPU 찾기
+            matchedCPUs = cpuData.filter(cpu => 
+                cpu.CPUName.toLowerCase().includes(matchedSeries.toLowerCase())
+            );
+        } else {
+            // 정확한 모델명이 있는 경우
+            const cpuMatch = findBestMatch(
+                hardwareData.cpu,
+                cpuData.map(cpu => cpu.CPUName),
+                0.7
+            );
+
+            if (cpuMatch) {
+                matchedCPUs = [cpuData.find(cpu => cpu.CPUName === cpuMatch.name)];
+            }
+        }
+
+        if (matchedCPUs.length > 0) {
+            const score = matchedCPUs.length > 1 ? 
+                calculateTrimmedMean(matchedCPUs, 'CPUScore') : 
+                parseFloat(matchedCPUs[0].CPUScore);
+
+            result.hardware.cpu = {
+                cpuName: hardwareData.cpu,
+                cpuScore: score
+            };
+        } else {
+            result.notFound.push('cpu');
+        }
+    }
+
+    // GPU 매칭 (CPU와 유사한 로직)
+    if (hardwareData.gpu) {
+        console.log('Matching GPU:', hardwareData.gpu);
+        let matchedGPUs = [];
+        const gpuInput = hardwareData.gpu.toLowerCase();
+
+        // 시리즈만 있는 경우 체크
+        const gpuSeriesPatterns = {
+            'gtx': /^nvidia\s*geforce\s*gtx$/i,
+            'rtx': /^nvidia\s*geforce\s*rtx$/i,
+            'rx': /^amd\s*radeon\s*rx$/i
+        };
+
+        let isSeriesOnly = false;
+        let matchedSeries = '';
+
+        for (const [series, pattern] of Object.entries(gpuSeriesPatterns)) {
+            if (pattern.test(gpuInput)) {
+                isSeriesOnly = true;
+                matchedSeries = series;
+                break;
+            }
+        }
+
+        if (isSeriesOnly) {
+            matchedGPUs = gpuData.filter(gpu => 
+                gpu.GPUName.toLowerCase().includes(matchedSeries.toLowerCase())
+            );
+        } else {
+            const gpuMatch = findBestMatch(
+                hardwareData.gpu,
+                gpuData.map(gpu => gpu.GPUName),
+                0.65
+            );
+
+            if (gpuMatch) {
+                matchedGPUs = [gpuData.find(gpu => gpu.GPUName === gpuMatch.name)];
+            }
+        }
+
+        if (matchedGPUs.length > 0) {
+            const score = matchedGPUs.length > 1 ? 
+                calculateTrimmedMean(matchedGPUs, 'GPUScore') : 
+                parseFloat(matchedGPUs[0].GPUScore);
+
+            result.hardware.gpu = {
+                gpuName: hardwareData.gpu,
+                gpuScore: score
+            };
+        } else {
+            result.notFound.push('gpu');
+        }
+    }
+
+    if (result.notFound.length > 0) {
+        result.success = false;
+        result.message = '일부 하드웨어를 찾을 수 없습니다.';
+    }
+
+    return result;
+}
+
+// 중간 50% 값들의 평균을 계산하는 함수 추가
+function calculateTrimmedMean(items, scoreKey) {
+    if (!items || items.length === 0) return 0;
+    
+    // 점수를 기준으로 정렬
+    const sortedItems = [...items].sort((a, b) => parseFloat(a[scoreKey]) - parseFloat(b[scoreKey]));
+    
+    // 25% 위치 계산
+    const quarterLength = Math.floor(sortedItems.length / 4);
+    
+    // 상위 25%와 하위 25%를 제외한 중간 50% 항목들 추출
+    const middleItems = sortedItems.slice(quarterLength, sortedItems.length - quarterLength);
+    
+    // 중간 50%의 평균 계산
+    if (middleItems.length === 0) {
+        return parseFloat(sortedItems[0][scoreKey]); // 항목이 너무 적을 경우 전체 평균 반환
+    }
+    
+    const sum = middleItems.reduce((acc, item) => acc + parseFloat(item[scoreKey]), 0);
+    return sum / middleItems.length;
 }
 
 module.exports = {
-    matchHardwareNames
+    matchHardwareNames,
+    gameSpecNameMatching,  // 새로운 함수 export
 };
